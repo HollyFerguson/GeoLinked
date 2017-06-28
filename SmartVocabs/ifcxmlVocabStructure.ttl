@@ -1,0 +1,41 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uso: <http://www.myuso.exp#> .
+@prefix geos: <http://schema.org/geo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+@prefix grddl: <https://www.w3.org/2003/g/data-view#> .
+@prefix xslt: <https://www.w3.org/TR/xslt-30/schema-for-xslt30#> .
+@prefix xpath: <https://www.w3.org/TR/1999/REC-xpath-19991116/#> .
+
+@prefix gbxml: <http://www.gbxml.org/schema#> .
+@prefix citygml: <http://www.citygml.org/index.php?id=1540#> .
+@prefix ifcxml: <http://www.buildingsmart-tech.org/ifc/IFC4/final/html/index.htm#> .
+
+
+ifcxml:Surface1    "start"^^xsd:string "/doc:iso_10303_28/ifc:uos/ifc:IfcColumn"^^xsd:string ;
+                   "id"^^xsd:string "ref:id"^^xsd:string ;
+                   "name"^^xsd:string "path:/ifc:Name"^^xsd:string ;
+                   "coors"^^xsd:string "path:0:begin,/ifc:Representation/ifc:IfcProductDefinitionShape,/ifc:IfcProductDefinitionShape/ifc:Representations/ifc:IfcShapeRepresentation,/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcMappedItem,/ifc:IfcMappedItem/ifc:MappingSource/ifc:IfcRepresentationMap,/ifc:IfcRepresentationMap/ifc:MappedRepresentation/ifc:IfcShapeRepresentation"^^xsd:string ;
+                   "coors"^^xsd:string "path:1:CadID,/ifc:Tag"^^xsd:string ;
+                   "coors"^^xsd:string "path:2:world_direction_ratios,/ifc:IfcShapeRepresentation/ifc:ContextOfItems/ifc:IfcGeometricRepresentationSubContext,/ifc:IfcGeometricRepresentationSubContext/ifc:ParentContext/ifc:IfcGeometricRepresentationContext,/ifc:IfcGeometricRepresentationContext/ifc:TrueNorth/ifc:IfcDirection,/ifc:IfcDirection/ifc:DirectionRatios/exp:double-wrapper"^^xsd:string ;
+                   "coors"^^xsd:string "path:3:depth,/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcExtrudedAreaSolid,/ifc:IfcExtrudedAreaSolid/ifc:Depth"^^xsd:string ;
+                   "coors"^^xsd:string "path:4:XandYDim,/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcExtrudedAreaSolid,/ifc:IfcExtrudedAreaSolid/ifc:SweptArea/ifc:IfcRectangleProfileDef,/ifc:IfcRectangleProfileDef/ifc:XDim"^^xsd:string ;
+                   "coors"^^xsd:string "path:5:profile_location,/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcExtrudedAreaSolid,/ifc:IfcExtrudedAreaSolid/ifc:SweptArea/ifc:IfcRectangleProfileDef,/ifc:IfcRectangleProfileDef/ifc:Position/ifc:IfcAxis2Placement2D,/ifc:IfcAxis2Placement2D/ifc:Location/ifc:IfcCartesianPoint,/ifc:IfcCartesianPoint/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string ;
+                   "coors"^^xsd:string "path:6:reference_direction,/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcExtrudedAreaSolid,/ifc:IfcExtrudedAreaSolid/ifc:SweptArea/ifc:IfcRectangleProfileDef,/ifc:IfcRectangleProfileDef/ifc:Position/ifc:IfcAxis2Placement2D,/ifc:IfcAxis2Placement2D/ifc:RefDirection/ifc:IfcDirection,/ifc:IfcDirection/ifc:DirectionRatios/exp:double-wrapper"^^xsd:string ;
+                   "coors"^^xsd:string "path:7:local_direction_ratios,/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcExtrudedAreaSolid,/ifc:IfcExtrudedAreaSolid/ifc:Position/ifc:IfcAxis2Placement3D,/ifc:IfcAxis2Placement3D/ifc:Location/ifc:IfcCartesianPoint,/ifc:IfcCartesianPoint/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string ;
+                   "coors"^^xsd:string "path:8:position,/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcExtrudedAreaSolid,/ifc:IfcExtrudedAreaSolid/ifc:Position/ifc:IfcAxis2Placement3D,/ifc:IfcAxis2Placement3D/ifc:Location/ifc:IfcCartesianPoint,/ifc:IfcCartesianPoint/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string ;
+                   "coors"^^xsd:string "path:9:extrude_direction,/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcExtrudedAreaSolid,/ifc:IfcExtrudedAreaSolid/ifc:ExtrudedDirection/ifc:IfcDirection,/ifc:IfcDirection/ifc:DirectionRatios/exp:double-wrapper"^^xsd:string .
+
+ifcxml:Surface2    "start"^^xsd:string "/doc:iso_10303_28/ifc:uos/ifc:IfcBeam"^^xsd:string ;
+                   "id"^^xsd:string "ref:id"^^xsd:string ;
+                   "name"^^xsd:string "path:/ifc:Name"^^xsd:string ;
+                   "coors"^^xsd:string "path:1:CadID,/ifc:Tag"^^xsd:string ;
+                   "coors"^^xsd:string "path:2:position,/ifc:ObjectPlacement/ifc:IfcLocalPlacement/ifc:RelativePlacement/ifc:IfcAxis2Placement3D/ifc:Location/ifc:IfcCartesianPoint/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string ;
+                   "coors"^^xsd:string "path:3:local_direction_ratios,/ifc:ObjectPlacement/ifc:IfcLocalPlacement/ifc:RelativePlacement/ifc:IfcAxis2Placement3D/ifc:Axis/ifc:IfcDirection,/ifc:IfcDirection/ifc:DirectionRatios/exp:double-wrapper"^^xsd:string ;
+                   "coors"^^xsd:string "path:4:reference_direction,/ifc:ObjectPlacement/ifc:IfcLocalPlacement/ifc:RelativePlacement/ifc:IfcAxis2Placement3D/ifc:RefDirection/ifc:IfcDirection,/ifc:IfcDirection/ifc:DirectionRatios/exp:double-wrapper"^^xsd:string ;
+                   "coors"^^xsd:string "path:5:profile_location,/ifc:Representation/ifc:IfcProductDefinitionShape/ifc:Representations/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcBoundingBox/ifc:Corner/ifc:IfcCartesianPoint/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string ;
+                   "coors"^^xsd:string "path:6:XandYDim,/ifc:Representation/ifc:IfcProductDefinitionShape/ifc:Representations/ifc:IfcShapeRepresentation/ifc:Items/ifc:IfcBoundingBox"^^xsd:string .
+

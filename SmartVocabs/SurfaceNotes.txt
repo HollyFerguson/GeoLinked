@@ -1,0 +1,447 @@
+		<IfcRelSpaceBoundary id="i3637">
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1810"/>
+			</ConnectionGeometry>
+		</IfcRelSpaceBoundary>
+		
+IfcConnectionSurfaceGeometry   SurfaceOnRelatingElement   IfcCurveBoundedPlane		
+IfcCurveBoundedPlane	BasisSurface	  IfcPlane
+										  Location      IfcCartesianPoint   (-14.98, 20.61, 0)
+										  Axis          IfcDirection        (0, 1, 0)  z
+										  RefDirection  IfcDirection		(0, 0, 1)  x
+IfcCurveBoundedPlane	OuterBoundary	  IfcPolyline     (0, 0)(11.0625, 0)(11.0625, 20)(0, 20)(0, 0)
+IfcCurveBoundedPlane	InnerBoundaries	  IfcPolyline     (3, 8.5)(7, 8.5)(7, 11.5)(3, 11.5)(3, 8.5)
+
+---------------------------------------------------------------------------
+		
+		<IfcRelSpaceBoundary id="i3640">
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1840"/>
+			</ConnectionGeometry>
+		</IfcRelSpaceBoundary>		
+
+IfcConnectionSurfaceGeometry   SurfaceOnRelatingElement   IfcCurveBoundedPlane		
+IfcCurveBoundedPlane	BasisSurface	  IfcPlane
+										  Location      IfcCartesianPoint   (-14.98, 10.61, 0)
+										  Axis          IfcDirection        (-1, 0, 0)
+										  RefDirection  IfcDirection		(0, 0, 1)
+IfcCurveBoundedPlane	OuterBoundary	  IfcPolyline     (0, 0)(11.0625, 0)(11.0625, 10)(0, 10)(0, 0)
+IfcCurveBoundedPlane	InnerBoundaries	  IfcPolyline     none listed
+
+---------------------------------------------------------------------------
+
+		<IfcRelSpaceBoundary id="i3641">
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1865"/>
+			</ConnectionGeometry>
+		</IfcRelSpaceBoundary>
+		
+IfcConnectionSurfaceGeometry   SurfaceOnRelatingElement   IfcCurveBoundedPlane		
+IfcCurveBoundedPlane	BasisSurface	  IfcPlane
+										  Location      IfcCartesianPoint   (-14.98, 10.61, 0)
+										  Axis          IfcDirection        (0, -1, 0)
+										  RefDirection  IfcDirection		(1, 0, 0)
+IfcCurveBoundedPlane	OuterBoundary	  IfcPolyline     (0, 0)(20, 0)(20, 11.0625)(0, 11.0625)(0, 0)
+IfcCurveBoundedPlane	InnerBoundaries	  IfcPolyline     (8.5, 3)(11.5, 3)(11.5, 7)(8.5, 7)(8.5, 3)
+		
+---------------------------------------------------------------------------
+
+		<IfcRelSpaceBoundary id="i3643">
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1905"/>
+			</ConnectionGeometry>
+		</IfcRelSpaceBoundary>
+
+IfcConnectionSurfaceGeometry   SurfaceOnRelatingElement   IfcCurveBoundedPlane		
+IfcCurveBoundedPlane	BasisSurface	  IfcPlane
+										  Location      IfcCartesianPoint   (5.01, 10.61, 0)
+										  Axis          IfcDirection        (1, 0, 0)
+										  RefDirection  IfcDirection		(0, 1, 0)
+IfcCurveBoundedPlane	OuterBoundary	  IfcPolyline     (0, 0)(10, 0)(10, 11.0625)(0, 11.0625)(0, 0)
+IfcCurveBoundedPlane	InnerBoundaries	  IfcPolyline     (3.5, 0)(6.5, 0)(6.5, 6.67)(3.5, 6.67)(3.5, 0)
+
+---------------------------------------------------------------------------
+
+		<IfcRelSpaceBoundary id="i3645">    ROOF
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1935"/>
+			</ConnectionGeometry>
+		</IfcRelSpaceBoundary>
+
+IfcConnectionSurfaceGeometry   SurfaceOnRelatingElement   IfcCurveBoundedPlane		
+IfcCurveBoundedPlane	BasisSurface	  IfcPlane
+										  Location      IfcCartesianPoint   (-14.9, 10.61, 11.0625)
+										  Axis          IfcDirection        (0, 0, 1)
+										  RefDirection  IfcDirection		(1, 0, 0)
+IfcCurveBoundedPlane	OuterBoundary	  IfcPolyline     (0, 0)(20, 0)(20, 10)(0, 10)(0, 0)
+IfcCurveBoundedPlane	InnerBoundaries	  IfcPolyline     none listed
+
+---------------------------------------------------------------------------
+
+		<IfcRelSpaceBoundary id="i3646">    SLAB
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1950"/>
+			</ConnectionGeometry>
+		</IfcRelSpaceBoundary>
+		
+IfcConnectionSurfaceGeometry   SurfaceOnRelatingElement   IfcCurveBoundedPlane		
+IfcCurveBoundedPlane	BasisSurface	  IfcPlane
+										  Location      IfcCartesianPoint   (-14.9, 10.61, 0)
+										  Axis          IfcDirection        (0, 0, -1)
+										  RefDirection  IfcDirection		(0, 1, 0)
+IfcCurveBoundedPlane	OuterBoundary	  IfcPolyline     (0, 0)(10, 0)(10, 20)(0, 20)(0, 0)
+IfcCurveBoundedPlane	InnerBoundaries	  IfcPolyline     none listed
+
+---------------------------------------------------------------------------
+after collected_data_revised:  {
+'relative_origin': ['-6.485464567', '20.61583823', '3.'], 
+'plane_coordinates': [['0.', '0.'], ['4.', '0.'], ['4.', '3.'], ['0.', '3.'], ['0.', '0.']], 
+'x_axis_relative': ['0.', '0.', '1.'], 
+'z_axis_relative': ['0.', '1.', '0.']}
+---------------------------------------------------------------------------
+IfcSlab
+IfcWallStandardCase
+IfcRoof
+IfcColumn
+IfcCurtainWall
+IfcBeam
+IfcFooting
+
+_:b27 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b29 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcSpace"^^xsd:string ;
+                                     rdf:rest [ rdf:first _:b28 ;               <--- so check if this is a string or OR case
+                                                rdf:rest rdf:nil ]
+                                   ] .									  
+_:b28 grddl:transformationProperty [ rdf:first ifcxml:option_1_OR ;             <--- then make this ifcxml: objects not strings if can
+                                     rdf:rest [ rdf:first ifcxml:option_2_OR... ;    also add this processing to the geo part of code
+                                                rdf:rest rdf:nil ]                   
+                                   ] .	
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+
+   
+
+
+
+
+
+		<IfcRelSpaceBoundary id="i3637">
+			<GlobalId>031vyoYR53RQsgp7K_qQx6</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<Name>2ndLevel</Name>
+			<RelatingSpace>
+				<IfcSpace xsi:nil="true" ref="i1768"/>
+			</RelatingSpace>
+			<RelatedBuildingElement>
+				<IfcWallStandardCase xsi:nil="true" ref="i2038"/>
+			</RelatedBuildingElement>
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1810"/>
+			</ConnectionGeometry>
+			<PhysicalOrVirtualBoundary>physical</PhysicalOrVirtualBoundary>
+			<InternalOrExternalBoundary>external</InternalOrExternalBoundary>
+		</IfcRelSpaceBoundary>
+		
+IfcWallStandardCase - Representation - IfcProductDefinitionShape
+IfcProductDefinitionShape - Representations - IfcShapeRepresentation (list)
+1)  IfcShapeRepresentation - Items - IfcBooleanClippingResult
+      IfcBooleanClippingResult - FirstOperand - IfcExtrudedAreaSolid 2005
+       IfcExtrudedAreaSolid - Depth 10.0
+	   IfcExtrudedAreaSolid - SweptArea - IfcRectangleProfileDef
+	        IfcRectangleProfileDef - XDim 20, YDim 1.16 (also a (10., 0.) axis point)
+	   IfcExtrudedAreaSolid - Position - IfcAxis2Placement3D
+		    IfcCartesianPoint - to (0., 0., 0.)
+	   IfcExtrudedAreaSolid - ExtrudedDirection - IfcDirection
+	       IfcDirection - Ratios - (0., 0., 1.)
+	  --------------------------
+      IfcBooleanClippingResult - SecondOperand - IfcPolygonalBoundedHalfSpace 2023
+        IfcPolygonalBoundedHalfSpace - Position - IfcAxis2Placement3D
+			...IfcCartesianPoint (0., -0.5833, 10)
+		IfcPolygonalBoundedHalfSpace - PolygonalBoundary -IfcPolyline
+			IfcPolyline - Points (List) - IfcCartesianPoint(s)
+			(1.16, 0), (20, 0), (20, 1.16), (0, 1.16), (0, 0)
+		IfcPolygonalBoundedHalfSpace - BaseSurface - IfcPlane
+			IfcPlane - Position - IfcAxis2Placement3D 2018
+			    IfcAxis2Placement3D - Location - IfcCartesianPoint
+				    ...IfcCartesianPoint (0., -0.5833, 10)
+				IfcAxis2Placement3D - Axis - IfcDirection
+				    (0, 0, 1)
+				IfcAxis2Placement3D - RefDirection - IfcDirection
+					(-1, 0, 0)
+2) IfcShapeRepresentation 2034
+	ContextOfItems - IfcGeometricRepresentationSubContext
+	    IfcGeometricRepresentationSubContext - ParentContext - IfcGeometricRepresentationContext
+		    IfcGeometricRepresentationContext - WorldCoordinateSystem - IfcAxis2Placement3D 1709
+			    IfcAxis2Placement3D - Location - IfcCartesianPoint (0, 0, 0)
+			IfcGeometricRepresentationContext - TrueNorth - IfcDirection 
+				(2, 0.5, 0.86)
+		
+		---------------------------------------------------------------------------
+		<IfcRelSpaceBoundary id="i3640">
+			<GlobalId>0zwYiHtBDFy9SXibEGLWbr</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<Name>2ndLevel</Name>
+			<RelatingSpace>
+				<IfcSpace xsi:nil="true" ref="i1768"/>
+			</RelatingSpace>
+			<RelatedBuildingElement>
+				<IfcWallStandardCase xsi:nil="true" ref="i2228"/>
+			</RelatedBuildingElement>
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1840"/>
+			</ConnectionGeometry>
+			<PhysicalOrVirtualBoundary>physical</PhysicalOrVirtualBoundary>
+			<InternalOrExternalBoundary>external</InternalOrExternalBoundary>
+		</IfcRelSpaceBoundary>
+		
+		
+
+		<IfcRelSpaceBoundary id="i3641">
+			<GlobalId>0HQ59paFDEMg$CooBcflW1</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<Name>2ndLevel</Name>
+			<RelatingSpace>
+				<IfcSpace xsi:nil="true" ref="i1768"/>
+			</RelatingSpace>
+			<RelatedBuildingElement>
+				<IfcWallStandardCase xsi:nil="true" ref="i2317"/>
+			</RelatedBuildingElement>
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1865"/>
+			</ConnectionGeometry>
+			<PhysicalOrVirtualBoundary>physical</PhysicalOrVirtualBoundary>
+			<InternalOrExternalBoundary>external</InternalOrExternalBoundary>
+		</IfcRelSpaceBoundary>
+		---------------------------------------------------------------------------
+		<IfcRelSpaceBoundary id="i3643">
+			<GlobalId>3ni1WQMFH5R9dHqr_QuJIn</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<Name>2ndLevel</Name>
+			<RelatingSpace>
+				<IfcSpace xsi:nil="true" ref="i1768"/>
+			</RelatingSpace>
+			<RelatedBuildingElement>
+				<IfcWallStandardCase xsi:nil="true" ref="i2385"/>
+			</RelatedBuildingElement>
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1905"/>
+			</ConnectionGeometry>
+			<PhysicalOrVirtualBoundary>physical</PhysicalOrVirtualBoundary>
+			<InternalOrExternalBoundary>external</InternalOrExternalBoundary>
+		</IfcRelSpaceBoundary>
+		---------------------------------------------------------------------------
+		<IfcRelSpaceBoundary id="i3645">
+			<GlobalId>1krgXaoez178l01QptN5xM</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<Name>2ndLevel</Name>
+			<RelatingSpace>
+				<IfcSpace xsi:nil="true" ref="i1768"/>
+			</RelatingSpace>
+			<RelatedBuildingElement>
+				<IfcRoof xsi:nil="true" ref="i3241"/>
+			</RelatedBuildingElement>
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1935"/>
+			</ConnectionGeometry>
+			<PhysicalOrVirtualBoundary>physical</PhysicalOrVirtualBoundary>
+			<InternalOrExternalBoundary>external</InternalOrExternalBoundary>
+		</IfcRelSpaceBoundary>
+		---------------------------------------------------------------------------
+		<IfcRelSpaceBoundary id="i3646">
+			<GlobalId>19I1Nv3ULARPm7ahN7XDB9</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<Name>2ndLevel</Name>
+			<RelatingSpace>
+				<IfcSpace xsi:nil="true" ref="i1768"/>
+			</RelatingSpace>
+			<RelatedBuildingElement>
+				<IfcSlab xsi:nil="true" ref="i3155"/>
+			</RelatedBuildingElement>
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1950"/>
+			</ConnectionGeometry>
+			<PhysicalOrVirtualBoundary>physical</PhysicalOrVirtualBoundary>
+			<InternalOrExternalBoundary>internal</InternalOrExternalBoundary>
+		</IfcRelSpaceBoundary>
+		
+		
+		
+#----------------------------------------------------------------------------		
+#----------------------------------------------------------------------------		
+#----------------------------------------------------------------------------
+
+    IfcBeam     
+	IfcBuildingElement*     
+	IfcBuildingElementComponent     
+	IfcBuildingElementPart     
+	IfcBuildingElementProxy     
+	IfcChamferEdgeFeature     
+	IfcColumn     
+	IfcCovering     
+	IfcCurtainWall     
+	IfcDiscreteAccessory     
+	IfcDistributionChamberElement     
+	IfcDistributionControlElement     
+	IfcDistributionElement*     
+	IfcDistributionFlowElement     
+	IfcDoor     
+	IfcEdgeFeature     
+	IfcElectricalElement*     
+	IfcElectricDistributionPoint     
+	IfcElementAssembly*     
+	IfcElementComponent*     
+	IfcEnergyConversionDevice     
+	IfcEquipmentElement*     
+	IfcFastener     
+	IfcFeatureElement*     
+	IfcFeatureElementAddition     
+	IfcFeatureElementSubtraction     
+	IfcFlowController     
+	IfcFlowFitting     
+	IfcFlowMovingDevice     
+	IfcFlowSegment     
+	IfcFlowStorageDevice     
+	IfcFlowTerminal     
+	IfcFlowTreatmentDevice     
+	IfcFooting     
+	IfcFurnishingElement*     
+	IfcMechanicalFastener     
+	IfcMember     
+	IfcOpeningElement     
+	IfcPile     
+	IfcPlate     
+	IfcProjectionElement     
+	IfcRailing     
+	IfcRamp     
+	IfcRampFlight     
+	IfcReinforcingBar     
+	IfcReinforcingElement     
+	IfcReinforcingMesh     
+	IfcRoof     
+	IfcRoundedEdgeFeature     
+	IfcSlab     
+	IfcStair     
+	IfcStairFlight     
+	IfcTendon     
+	IfcTendonAnchor     
+	IfcTransportElement*     
+	IfcVirtualElement*     
+	IfcWall     
+	IfcWallStandardCase     
+	IfcWindow
+
+
+
+_:b52 
+
+
+*/ifc:IfcRelSpaceBoundary - RelatedBuildingElement - IfcWallStandardCase
+
+*/ifc:IfcRelAssociatesMaterial - RelatedObjects - IfcWallStandardCase
+*/ifc:IfcRelAssociatesMaterial - RelatingMaterial - IfcMaterialLayerSetUsage
+
+IfcMaterialLayerSetUsage - ForLayerSet - IfcMaterialLayerSet
+IfcMaterialLayerSet - MaterialLayers - IfcMaterialLayer
+IfcMaterialLayer -LayerThickness
+
+
+* at beginning means start from root
+** at end means store whatever child exists (where can be IfcWallStandardCase, IfcSlab, etc.), use, and append child to beginning of next start
+*** at end means store whatever child exists (where can be IfcWallStandardCase, IfcSlab, etc.), use, and append child to end of next start
+*n* at end means strip *, make integer and go back that many levels
+
+
+
+*/ifc:IfcRelSpaceBoundary - RelatedBuildingElement - ChildTag (**) (IfcWallStandardCase)
+if last thing is ChildTag
+use_this_child = ""
+for child in RelatedBuildingElement:
+    print(child.tag)
+	use_this_child = child.tag
+	break (only want first one)
+replace ChildTag with use_this_child in the xpath
+
+
+
+*/ifc:IfcRelAssociatesMaterial - RelatedObjects - IfcWallStandardCase  (find match to use_this_child ref start is this whole path)
+getparent() getparent() 
+*/ifc:IfcRelAssociatesMaterial
+
+*/ifc:IfcRelAssociatesMaterial - RelatingMaterial - IfcMaterialLayerSetUsage
+
+IfcMaterialLayerSetUsage - ForLayerSet - IfcMaterialLayerSet
+IfcMaterialLayerSet - MaterialLayers - IfcMaterialLayer
+IfcMaterialLayer -LayerThickness
+
+
+----------------------------------IfcRoof
+* at beginning means start from root
+** at end means store whatever child exists (where can be IfcWallStandardCase, IfcSlab, etc.), use, and append child to beginning of next start
+*** at end means store whatever child exists (where can be IfcWallStandardCase, IfcSlab, etc.), use, and append child to end of next start
+*n at end means strip *, make integer and go back that many levels
+
+
+
+
+*/ifc:IfcRelSpaceBoundary - RelatedBuildingElement - ChildTag (**) (IfcRoof of some ref)
+
+*/ifc:IfcRelAggregates - RelatingObject - That_Child (should be the roof) (only need id) to go to nowhere and get same id
+*/ifc:IfcRelAggregates - RelatedObject - this new child (here is an IfcSlab 3270)
+
+IfcRelAssociatesMaterial - RelatedObjects - Child that is Slab now
+
+IfcRelAssociatesMaterial go back to here
+
+IfcRelAssociatesMaterial - RelatingMaterial - IfcMaterialLayerSet
+IfcMaterialLayerSet - MaterialLayers - IfcMaterialLayer
+IfcMaterialLayer -LayerThickness
+
+
+
+-----------------------------------IfcWindow is found slightly differently as well:
+*/ifc:IfcRelAssociatesMaterial - RelatedObjects - IfcWallStandardCase  (find match to use_this_child ref start is this whole path)
+getparent() getparent() 
+*/ifc:IfcRelAssociatesMaterial
+
+*/ifc:IfcRelAssociatesMaterial - RelatingMaterial - IfcMaterialList
+*/ifc:IfcMaterialList - Materials - IfcMaterial...only names
+
+from base listing can get height and width though
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

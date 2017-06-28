@@ -1,0 +1,261 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uso: <http://www.myuso.exp#> .
+@prefix geos: <http://schema.org/geo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+@prefix grddl: <https://www.w3.org/2003/g/data-view#> .
+@prefix xslt: <https://www.w3.org/TR/xslt-30/schema-for-xslt30#> .
+@prefix xpath: <https://www.w3.org/TR/1999/REC-xpath-19991116/#> .
+
+@prefix gbxml: <http://www.gbxml.org/schema#> .
+@prefix citygml: <http://www.citygml.org/index.php?id=1540#> .
+@prefix ifcxml: <http://www.buildingsmart-tech.org/ifc/IFC4/final/html/index.htm#> .
+
+
+
+gbxml:gbXML rdf:type geo:SpatialObject ;
+                rdf:type grddl:RootNode ;
+                rdf:type uso:GeoInstance ;
+                uso:hasSpatialCollectionLocationMember uso:SpaceCollectionLocation ;
+                grddl:transformation xslt:import;
+                rdf:type grddl:RootNode ;
+                rdfs:comment """The order to process in this schema""" ;
+                grddl:transformationProperty [ rdf:first uso:GeoInstance ;
+                                               rdf:rest [rdf:first uso:SpaceCollectionLocation ;
+                                                         rdf:rest [rdf:first uso:SpaceCollection ;
+                                                                   rdf:rest [rdf:first uso:Space ;
+                                                                             rdf:rest [rdf:first uso:SpaceBoundary ;
+                                                                                       rdf:rest [rdf:first uso:SpaceBoundaryElement ;
+                                                                         ] ] ] ] ] ] ;
+                rdfs:comment """xslt:element->"start" means location of root node
+                                xslt:list->"coors" means place of respective coordinate data following fdata formatting
+                                xslt:list->"info" means info points we care about at this level
+                                xslt:list->"idata" means collect these data at current level
+                                xslt:list->"fdata" means at this level follow this path further
+                                xslt:list->"bdata" means from current href start over at main root""" ;
+                xslt:element [ rdf:first "start"^^xsd:string ;
+                               rdf:rest [ rdf:first "/gb:gbXML"^^xsd:string ;
+                                          rdf:rest rdf:nil ]
+                             ] ;
+                xslt:attribute [ rdf:first rdf:nil ;
+                                 rdf:rest rdf:nil ] ;
+                xslt:complexType "unnecessary"^^xsd:string ;
+                rdfs:isDefinedBy rdf:nil ;
+                xslt:list [ rdf:first rdf:nil ;
+                            rdf:rest rdf:nil ] ;
+                geo:hasGeometry [ rdf:first rdf:nil ;
+                                   rdf:rest rdf:nil ] .
+
+gbxml:Location  rdf:type uso:SpaceCollectionLocation ;
+                grddl:transformation uso:SpaceCollectionLocation ;
+                uso:hasSpaceCollectionMember uso:SpaceCollection ;
+                xslt:element [ rdf:first "start"^^xsd:string ;
+                               rdf:rest [ rdf:first "/gb:gbXML/gb:Campus/gb:Location"^^xsd:string ;
+                                          rdf:rest rdf:nil ]
+                             ] ;
+                xslt:list (
+                           "info"^^xsd:string
+                           [ rdf:first gbxml:Latitude ;
+                             rdf:rest [rdf:first gbxml:Longitude ;
+                                       rdf:rest [rdf:first gbxml:Elevation ;
+                                                 rdf:rest rdf:nil ]
+                                      ]
+                           ]
+                          ) ;
+                xslt:attribute [ rdf:first rdf:nil ;
+                                 rdf:rest rdf:nil ] ;
+                xslt:complexType "unnecessary"^^xsd:string ;
+                rdfs:isDefinedBy rdf:nil ;
+                geo:hasGeometry [ rdf:first rdf:nil ;
+                                   rdf:rest rdf:nil ] .
+gbxml:Latitude rdf:type geos:GeoCoordinates ;
+               rdfs:isDefinedBy ( _:b0 ) .
+_:b0 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "/gb:gbXML/gb:Campus/gb:Location/gb:Latitude"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .
+gbxml:Longitude rdf:type geos:GeoCoordinates ;
+                rdfs:isDefinedBy ( _:b1 ) .
+_:b1 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "/gb:gbXML/gb:Campus/gb:Location/gb:Longitude"^^xsd:string ;
+                                   rdf:rest rdf:nil ] .
+gbxml:Elevation rdf:type geos:GeoCoordinates ;
+                rdfs:isDefinedBy ( _:b2 ) .
+_:b2 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "/gb:gbXML/gb:Campus/gb:Location/gb:Elevation"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .
+
+gbxml:Building   rdf:type uso:SpaceCollection ;
+				 grddl:transformation uso:SpaceCollection ;
+				 uso:hasSpaceMember uso:Space ;
+				 xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "/gb:gbXML/gb:Campus/gb:Building"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                              ] ;
+				 xslt:list (
+						    "info"^^xsd:string
+						    [ rdf:first gbxml:Area ;
+							  rdf:rest rdf:nil ]
+						   ) ;
+				 xslt:attribute [ rdf:first rdf:nil ;
+                                  rdf:rest rdf:nil ] ;
+                 xslt:complexType "unnecessary"^^xsd:string ;
+                 rdfs:isDefinedBy rdf:nil ;
+                 geo:hasGeometry [ rdf:first rdf:nil ;
+                                    rdf:rest rdf:nil ] .
+gbxml:Area rdfs:isDefinedBy ( _:b3 ) .
+_:b3 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "/gb:gbXML/gb:Campus/gb:Building/gb:Area"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .
+
+gbxml:Space   rdf:type uso:Space ;
+			  grddl:transformation uso:Space ;
+			  uso:hasSpaceBoundaryMember uso:SpaceBoundary ;
+			  xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "/gb:gbXML/gb:Campus/gb:Building/gb:Space"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                           ] ;
+			  xslt:list (
+                         "info"^^xsd:string
+                         [ rdf:first gbxml:SpaceBoundary ;
+                           rdf:rest rdf:nil ]
+                        ) ;
+              xslt:attribute [ rdf:first gbxml:id ;
+                               rdf:rest rdf:nil ] ;
+              xslt:complexType "complex"^^xsd:string ;
+              rdfs:isDefinedBy _:b99 ;
+              geo:hasGeometry [ rdf:first _:b4 ;
+                                rdf:rest rdf:nil ] .
+_:b4 rdf:type geo:Geometry ;
+     rdfs:isDefinedBy rdf:nil ;
+     rdfs:label "3DC"@en ;
+     xslt:element "fdata"^^xsd:string ;
+     grddl:transformationProperty [ rdf:first "/gb:ShellGeometry/gb:ClosedShell/gb:PolyLoop"^^xsd:string ;
+                                    rdf:rest [rdf:first "/gb:CartesianPoint"^^xsd:string ;
+                                              rdf:rest [rdf:first "/gb:Coordinate"^^xsd:string ;
+                                                         rdf:rest rdf:nil ]
+                                             ]
+                                  ] .
+gbxml:SpaceBoundary rdfs:isDefinedBy ( _:b5 ) .
+_:b5 xslt:element "fdata"^^xsd:string ;
+     xslt:attribute [ rdf:first gbxml:surfaceIdRef ;
+                       rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "/gb:SpaceBoundary"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .
+_:b99 xslt:element "fdata"^^xsd:string ;
+      xslt:attribute [ rdf:first gbxml:surfaceIdRef ;
+                       rdf:rest rdf:nil ] ;
+      grddl:transformationProperty "/gb:SpaceBoundary"^^xsd:string .
+
+gbxml:Surface   rdf:type uso:SpaceBoundary ;
+                grddl:transformation uso:SpaceBoundary ;
+                uso:hasSpaceBoundaryElementMember uso:SpaceBoundaryElement ;
+                xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "/gb:gbXML/gb:Campus/gb:Surface"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                             ] ;
+                rdfs:comment """Eventually list will include gbxml:Opening""" ;
+                xslt:list (
+                           "info"^^xsd:string
+                           [ rdf:first gbxml:AdjacentSpaceId ;
+                             rdf:rest rdf:nil ]
+                          ) ;
+                xslt:attribute [ rdf:first gbxml:id ;
+                                 rdf:rest [ rdf:first gbxml:constructionIdRef ;
+                                            rdf:rest rdf:nil ]
+                               ] ;
+                xslt:complexType "linkedC"^^xsd:string ;
+                rdfs:isDefinedBy _:b8 ;
+                geo:hasGeometry [ rdf:first _:b6 ;
+                                  rdf:rest [ rdf:first _:b12 ;
+                                             rdf:rest rdf:nil ]
+                                ] .
+_:b6 rdf:type geo:Geometry ;
+     rdfs:label "2DC"@en ;
+	 rdfs:isDefinedBy rdf:nil ;
+     xslt:element "fdata"^^xsd:string ;
+     grddl:transformationProperty [ rdf:first ""^^xsd:string ;
+                                    rdf:rest [rdf:first "/gb:PlanarGeometry/gb:PolyLoop/gb:CartesianPoint"^^xsd:string ;
+                                              rdf:rest [rdf:first "/gb:Coordinate"^^xsd:string ;
+                                                         rdf:rest rdf:nil ]
+                                             ]
+                                  ] .
+_:b12  rdf:type geo:Geometry ;
+      rdfs:label "3DC"@en ;
+	  rdfs:isDefinedBy rdf:nil ;
+      xslt:element "fdata"^^xsd:string ;
+      grddl:transformationProperty [ rdf:first "some_function_next_level"^^xsd:string ;
+                                     rdf:rest rdf:nil ] .
+gbxml:AdjacentSpaceId rdfs:isDefinedBy ( _:b7 ) .
+_:b7  xslt:element "fdata"^^xsd:string ;
+      xslt:attribute [ rdf:first gbxml:spaceIdRef ;
+                       rdf:rest rdf:nil ] ;
+      grddl:transformationProperty [ rdf:first "/gb:AdjacentSpaceId"^^xsd:string ;
+                                     rdf:rest rdf:nil ] .
+
+gbxml:Material   rdf:type    uso:SpaceBoundaryElement ;
+                 grddl:transformation uso:SpaceBoundaryElement ;
+                 uso:hasLastDataSet uso:lastDataSet ;
+                 xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "/gb:gbXML/gb:Material"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                              ] ;
+                 xslt:list (
+                            "info"^^xsd:string
+                            [ rdf:first gbxml:Thickness ;
+                              rdf:rest rdf:nil ]
+                           ) ;
+                 xslt:attribute [ rdf:first gbxml:id ;
+                                  rdf:rest rdf:nil ] ;
+                 xslt:complexType "unnecessary"^^xsd:string ;
+                 rdfs:isDefinedBy rdf:nil ;
+                 geo:hasGeometry [ rdf:first _:b11 ;
+                                    rdf:rest rdf:nil ] .
+gbxml:Thickness rdfs:isDefinedBy ( _:b10 ) .
+_:b8  xslt:element "bdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b9 ;
+      xslt:attribute [ rdf:first gbxml:id ;
+                       rdf:rest [rdf:first gbxml:layerIdRef ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/gb:gbXML/gb:Construction"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gb:LayerId"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b9  xslt:element "bdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b10 ;
+      xslt:attribute [ rdf:first gbxml:id ;
+                       rdf:rest [rdf:first gbxml:materialIdRef ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/gb:gbXML/gb:Layer"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gb:MaterialId"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b10 xslt:element "bdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+      xslt:attribute [ rdf:first gbxml:id ;
+                       rdf:rest [rdf:first gbxml:unit ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/gb:gbXML/gb:Material"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gb:Thickness"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b11 rdf:type geo:Geometry ;
+      rdfs:label "3DC"@en ;
+	  rdfs:isDefinedBy rdf:nil ;
+      xslt:element "fdata"^^xsd:string ;
+      grddl:transformationProperty [ rdf:first "some_function_this_level"^^xsd:string ;
+                                     rdf:rest rdf:nil ] .
+

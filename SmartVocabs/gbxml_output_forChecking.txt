@@ -1,0 +1,709 @@
+C:\Python27\python.exe C:/Users/hfergus2/Desktop/GeoLinked/main.py
+Main Started
+current_vocab  SmartVocabs/gbxmlVocab.ttl
+-----------------top
+########################################################################################################
+Now using:  GeoInstance http://www.myuso.exp#GeoInstance
+http://www.gbxml.org/schema#gbXML is a http://www.myuso.exp#GeoInstance
+predicate_list  ['hasSpatialCollectionLocationMember']
+-----------ADDED----------- http://www.sw.org/UBO#GeoInstance1 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.myuso.exp#GeoInstance
+-----------ADDED----------- http://www.sw.org/UBO#GeoInstance1 http://www.sw.org/UBO#hasSpatialCollectionLocationMember http://www.sw.org/UBO#SpaceCollectionLocation1
+Spatial_Instance_new:, http://www.sw.org/UBO#GeoInstance1
+########################################################################################################
+Now using:  SpaceCollectionLocation http://www.myuso.exp#SpaceCollectionLocation
+http://www.gbxml.org/schema#Location is a http://www.myuso.exp#SpaceCollectionLocation
+predicate_list  ['hasSpaceCollectionMember', 'hasSpaceMember', 'hasSpaceBoundaryMember', 'hasSpaceBoundaryElementMember']
+-----------------next_level_search
+http://www.myuso.exp#SpaceCollectionLocation
+i 1 SpaceCollectionLocation
+full_predicate  http://www.myuso.exp#hasSpaceCollectionMember
+reaching parts sequence
+isDefinedBy data:
+DefinedBy is nil...passed since types are processed already alter on
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#first'), rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#nil'), rdflib.term.BNode('ub2bL76C33'))
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#rest'), rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#nil'), rdflib.term.BNode('ub2bL76C33'))
+e_here
+list continues with blank node ub2bL60C41
+getting to the recursion
+e_here
+l_here
+l_here
+list continues with blank node f4cd68bcecd1d4617aba6882923fc6f77b2
+getting to the recursion
+getting to the recursion
+getting to the recursion
+root_att_data_list needs attention:  []
+startPathDeeperData:  ['/gb:gbXML/gb:Campus/gb:Location']
+l_data_list :  ['http://www.gbxml.org/schema#Latitude', 'http://www.gbxml.org/schema#Longitude', 'http://www.gbxml.org/schema#Elevation']
+item in l_data_list:  http://www.gbxml.org/schema#Latitude
+this second level row:  f4cd68bcecd1d4617aba6882923fc6f77b3
+data_list ['f4cd68bcecd1d4617aba6882923fc6f77b3']
+getting to the recursion
+first is reading as nil...
+getting to the recursion
+Use these different pieces to query xml instance
+start path 1----- /gb:gbXML/gb:Campus/gb:Location [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>]
+and [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>]
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollectionLocation1 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceCollectionLocation
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Building'), rdflib.term.BNode('ub2bL103C19'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Location /gb:gbXML/gb:Campus/gb:Building
+start path 2 /gb:gbXML/gb:Campus/gb:Building
+just stored:  SpaceCollection 1
+unnecessary
+used this one
+testing current_data_type SpaceCollectionLocation bdata
+hasRootGeometry in addCoordinateData ['http://www.w3.org/1999/02/22-rdf-syntax-ns#nil']
+self.xml_instance_tracking  1 {rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'): [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'), 'SpaceCollectionLocation', [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>], None, 0, 0]}
+processing root geometries
+case 7 0 0 
+handling prop:  /gb:gbXML/gb:Campus/gb:Location/gb:Latitude
+[<Element {http://www.gbxml.org/schema}Latitude at 0x5e3aea0>]
+Making triple with:  gb:Latitude 42.35843 DataType1 1
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollectionLocation1 http://www.sw.org/UBO#hasProperty http://www.sw.org/UBO#Property1
+-----------ADDED----------- http://www.sw.org/UBO#Property1 http://www.sw.org/UBO#hasType gb:Latitude
+-----------ADDED----------- http://www.sw.org/UBO#Property1 http://www.sw.org/UBO#hasValue 42.35843
+this second level row:  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+item in l_data_list:  http://www.gbxml.org/schema#Longitude
+this second level row:  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+this second level row:  f4cd68bcecd1d4617aba6882923fc6f77b5
+data_list ['f4cd68bcecd1d4617aba6882923fc6f77b5']
+first is reading as nil...
+getting to the recursion
+getting to the recursion
+Use these different pieces to query xml instance
+start path 1----- /gb:gbXML/gb:Campus/gb:Location [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>]
+and [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>]
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollectionLocation1 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceCollectionLocation
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Building'), rdflib.term.BNode('ub2bL103C19'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Location /gb:gbXML/gb:Campus/gb:Building
+start path 2 /gb:gbXML/gb:Campus/gb:Building
+just stored:  SpaceCollection 1
+unnecessary
+used this one
+testing current_data_type SpaceCollectionLocation bdata
+hasRootGeometry in addCoordinateData ['http://www.w3.org/1999/02/22-rdf-syntax-ns#nil']
+self.xml_instance_tracking  1 {rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'): [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'), 'SpaceCollectionLocation', [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>], None, 0, 0]}
+processing root geometries
+case 7 0 0 
+handling prop:  /gb:gbXML/gb:Campus/gb:Location/gb:Longitude
+[<Element {http://www.gbxml.org/schema}Longitude at 0x5e3a1f8>]
+Making triple with:  gb:Longitude -71.05978 DataType1 2
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollectionLocation1 http://www.sw.org/UBO#hasProperty http://www.sw.org/UBO#Property2
+-----------ADDED----------- http://www.sw.org/UBO#Property2 http://www.sw.org/UBO#hasType gb:Longitude
+-----------ADDED----------- http://www.sw.org/UBO#Property2 http://www.sw.org/UBO#hasValue -71.05978
+item in l_data_list:  http://www.gbxml.org/schema#Elevation
+this second level row:  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+this second level row:  f4cd68bcecd1d4617aba6882923fc6f77b7
+data_list ['f4cd68bcecd1d4617aba6882923fc6f77b7']
+first is reading as nil...
+getting to the recursion
+getting to the recursion
+Use these different pieces to query xml instance
+start path 1----- /gb:gbXML/gb:Campus/gb:Location [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>]
+and [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>]
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollectionLocation1 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceCollectionLocation
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Building'), rdflib.term.BNode('ub2bL103C19'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Location /gb:gbXML/gb:Campus/gb:Building
+start path 2 /gb:gbXML/gb:Campus/gb:Building
+just stored:  SpaceCollection 1
+unnecessary
+used this one
+testing current_data_type SpaceCollectionLocation bdata
+hasRootGeometry in addCoordinateData ['http://www.w3.org/1999/02/22-rdf-syntax-ns#nil']
+self.xml_instance_tracking  1 {rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'): [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'), 'SpaceCollectionLocation', [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>], None, 0, 0]}
+processing root geometries
+case 7 0 0 
+handling prop:  /gb:gbXML/gb:Campus/gb:Location/gb:Elevation
+[<Element {http://www.gbxml.org/schema}Elevation at 0x5e40f30>]
+Making triple with:  gb:Elevation 16.0 DataType1 3
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollectionLocation1 http://www.sw.org/UBO#hasProperty http://www.sw.org/UBO#Property3
+-----------ADDED----------- http://www.sw.org/UBO#Property3 http://www.sw.org/UBO#hasType gb:Elevation
+-----------ADDED----------- http://www.sw.org/UBO#Property3 http://www.sw.org/UBO#hasValue 16.0
+full_predicate  http://www.myuso.exp#hasSpaceMember
+full_predicate  http://www.myuso.exp#hasSpaceBoundaryMember
+full_predicate  http://www.myuso.exp#hasSpaceBoundaryElementMember
+########################################################################################################
+Now using:  SpaceCollection http://www.myuso.exp#SpaceCollection
+http://www.gbxml.org/schema#Building is a http://www.myuso.exp#SpaceCollection
+predicate_list  ['hasSpaceMember', 'hasSpaceBoundaryMember', 'hasSpaceBoundaryElementMember', 'belongsToSpaceCollectionLocation']
+-----------------next_level_search
+http://www.myuso.exp#SpaceCollection
+i 2 SpaceCollection
+full_predicate  http://www.myuso.exp#hasSpaceMember
+reaching parts sequence
+isDefinedBy data:
+DefinedBy is nil...passed since types are processed already alter on
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#first'), rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#nil'), rdflib.term.BNode('ub2bL116C34'))
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#rest'), rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#nil'), rdflib.term.BNode('ub2bL116C34'))
+e_here
+e_here
+list continues with blank node ub2bL104C42
+getting to the recursion
+l_here
+list continues with blank node f4cd68bcecd1d4617aba6882923fc6f77b10
+getting to the recursion
+l_here
+root_att_data_list needs attention:  []
+startPathDeeperData:  ['/gb:gbXML/gb:Campus/gb:Building']
+l_data_list :  ['http://www.gbxml.org/schema#Area']
+item in l_data_list:  http://www.gbxml.org/schema#Area
+this second level row:  f4cd68bcecd1d4617aba6882923fc6f77b11
+data_list ['f4cd68bcecd1d4617aba6882923fc6f77b11']
+first is reading as nil...
+getting to the recursion
+getting to the recursion
+Use these different pieces to query xml instance
+start path 1----- /gb:gbXML/gb:Campus/gb:Building [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>]
+and [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>]
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollection1 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceCollection
+check me http://www.sw.org/UBO#SpaceCollectionLocation1 http://www.sw.org/UBO#hasSpaceCollectionMember http://www.sw.org/UBO#SpaceCollection1 http://www.sw.org/UBO#SpaceCollection1
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollectionLocation1 http://www.sw.org/UBO#hasSpaceCollectionMember http://www.sw.org/UBO#SpaceCollection1
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Space'), rdflib.term.BNode('ub2bL128C19'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Building /gb:gbXML/gb:Campus/gb:Building/gb:Space
+start path 2 /gb:gbXML/gb:Campus/gb:Building/gb:Space
+just stored:  Space 1
+unnecessary
+used this one
+testing current_data_type SpaceCollection bdata
+hasRootGeometry in addCoordinateData ['http://www.w3.org/1999/02/22-rdf-syntax-ns#nil']
+self.xml_instance_tracking  2 {rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'): [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'), 'SpaceCollectionLocation', [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollection1'): [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollection1'), 'SpaceCollection', [<Element {http://www.gbxml.org/schema}Space at 0x5e45cf0>], None, 0, 0]}
+processing root geometries
+case 7 0 0 
+handling prop:  /gb:gbXML/gb:Campus/gb:Building/gb:Area
+[<Element {http://www.gbxml.org/schema}Area at 0x5e3ab88>]
+Making triple with:  gb:Area 200.0 DataType2 4
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollection1 http://www.sw.org/UBO#hasProperty http://www.sw.org/UBO#Property4
+-----------ADDED----------- http://www.sw.org/UBO#Property4 http://www.sw.org/UBO#hasType gb:Area
+-----------ADDED----------- http://www.sw.org/UBO#Property4 http://www.sw.org/UBO#hasValue 200.0
+this second level row:  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+full_predicate  http://www.myuso.exp#hasSpaceBoundaryMember
+full_predicate  http://www.myuso.exp#hasSpaceBoundaryElementMember
+full_predicate  http://www.myuso.exp#belongsToSpaceCollectionLocation
+########################################################################################################
+Now using:  Space http://www.myuso.exp#Space
+http://www.gbxml.org/schema#Space is a http://www.myuso.exp#Space
+predicate_list  ['hasSpaceBoundaryMember', 'hasSpaceBoundaryElementMember', 'belongsToSpaceCollection', 'belongsToSpaceCollectionLocation']
+-----------------next_level_search
+http://www.myuso.exp#Space
+i 3 Space
+full_predicate  http://www.myuso.exp#hasSpaceBoundaryMember
+reaching parts sequence
+isDefinedBy data:
+DefinedBy is not nil...but at this point has been handled by l_list_data in deeper function
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#rest'), rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#nil'), rdflib.term.BNode('ub2bL141C31'))
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#first'), rdflib.term.BNode('f4cd68bcecd1d4617aba6882923fc6f77b16'), rdflib.term.BNode('ub2bL141C31'))
+getting to the recursion
+e_here
+e_here
+list continues with blank node ub2bL129C42
+getting to the recursion
+l_here
+l_here
+list continues with blank node f4cd68bcecd1d4617aba6882923fc6f77b14
+getting to the recursion
+root_att_data_list needs attention:  ['http://www.gbxml.org/schema#id']
+startPathDeeperData:  ['/gb:gbXML/gb:Campus/gb:Building/gb:Space']
+l_data_list :  ['http://www.gbxml.org/schema#SpaceBoundary']
+item in l_data_list:  http://www.gbxml.org/schema#SpaceBoundary
+this second level row:  f4cd68bcecd1d4617aba6882923fc6f77b17
+data_list ['f4cd68bcecd1d4617aba6882923fc6f77b17']
+getting to the recursion
+getting to the recursion
+Use these different pieces to query xml instance
+start path 1----- /gb:gbXML/gb:Campus/gb:Building/gb:Space [<Element {http://www.gbxml.org/schema}Space at 0x5e45cf0>]
+and [<Element {http://www.gbxml.org/schema}Space at 0x5e45cf0>]
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#Space1 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#Space
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Surface'), rdflib.term.BNode('ub2bL167C30'))
+getting to the recursion
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Building/gb:Space /gb:gbXML/gb:Campus/gb:Surface
+start path 2 /gb:gbXML/gb:Campus/gb:Surface
+just stored:  SpaceBoundary 8
+complex http://www.gbxml.org/schema#Space
+getting to the recursion
+<Element {http://www.gbxml.org/schema}Surface at 0x5e45048>
+found this to belong by matching:  aim0167 aim0167
+-----------ADDED----------- http://www.sw.org/UBO#Space1 http://www.sw.org/UBO#hasSpaceBoundaryMember http://www.sw.org/UBO#SpaceBoundary1
+<Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>
+found this to belong by matching:  aim0188 aim0188
+-----------ADDED----------- http://www.sw.org/UBO#Space1 http://www.sw.org/UBO#hasSpaceBoundaryMember http://www.sw.org/UBO#SpaceBoundary2
+<Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>
+found this to belong by matching:  aim0199 aim0199
+-----------ADDED----------- http://www.sw.org/UBO#Space1 http://www.sw.org/UBO#hasSpaceBoundaryMember http://www.sw.org/UBO#SpaceBoundary3
+<Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>
+found this to belong by matching:  aim0220 aim0220
+-----------ADDED----------- http://www.sw.org/UBO#Space1 http://www.sw.org/UBO#hasSpaceBoundaryMember http://www.sw.org/UBO#SpaceBoundary4
+<Element {http://www.gbxml.org/schema}Surface at 0x5e45750>
+found this to belong by matching:  aim0241 aim0241
+-----------ADDED----------- http://www.sw.org/UBO#Space1 http://www.sw.org/UBO#hasSpaceBoundaryMember http://www.sw.org/UBO#SpaceBoundary5
+<Element {http://www.gbxml.org/schema}Surface at 0x5e45ab0>
+found this to belong by matching:  aim0252 aim0252
+-----------ADDED----------- http://www.sw.org/UBO#Space1 http://www.sw.org/UBO#hasSpaceBoundaryMember http://www.sw.org/UBO#SpaceBoundary6
+<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>
+<Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>
+YeS [<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, <Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>]
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollection1 http://www.sw.org/UBO#hasSpaceBoundaryMember http://www.sw.org/UBO#SpaceBoundary7
+YeS [<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, <Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>]
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollection1 http://www.sw.org/UBO#hasSpaceBoundaryMember http://www.sw.org/UBO#SpaceBoundary8
+-----------ADDED----------- http://www.sw.org/UBO#SpaceCollection1 http://www.sw.org/UBO#hasSpaceMember http://www.sw.org/UBO#Space1
+self.branch_instance_counter_spaces 1
+used this one
+testing current_data_type Space fdata
+hasRootGeometry in addCoordinateData ['f4cd68bcecd1d4617aba6882923fc6f77b16']
+self.xml_instance_tracking  3 {rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'): [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'), 'SpaceCollectionLocation', [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollection1'): [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollection1'), 'SpaceCollection', [<Element {http://www.gbxml.org/schema}Space at 0x5e45cf0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#Space1'): [<Element {http://www.gbxml.org/schema}Space at 0x5e45cf0>, rdflib.term.URIRef(u'http://www.sw.org/UBO#Space1'), 'Space', [<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, <Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>], None, 0, 0]}
+processing root geometries
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+case 6
+stored  [[(-18.0722, 2.497701, 0.0), (-22.48886, 10.14759, 0.0), (-6.178719, 19.56426, 0.0), (-1.762052, 11.91437, 0.0)], [(-22.48886, 10.14759, 0.0), (-22.48886, 10.14759, 10.0), (-6.178719, 19.56426, 10.0), (-6.178719, 19.56426, 0.0)], [(-18.0722, 2.497701, 0.0), (-18.0722, 2.497701, 10.0), (-22.48886, 10.14759, 10.0), (-22.48886, 10.14759, 0.0)], [(-18.0722, 2.497701, 0.0), (-1.762052, 11.91437, 0.0), (-1.762052, 11.91437, 10.0), (-18.0722, 2.497701, 10.0)], [(-1.762052, 11.91437, 0.0), (-6.178719, 19.56426, 0.0), (-6.178719, 19.56426, 10.0), (-1.762052, 11.91437, 10.0)], [(-18.0722, 2.497701, 10.0), (-1.762052, 11.91437, 10.0), (-6.178719, 19.56426, 10.0), (-22.48886, 10.14759, 10.0)]]
+fdata section needs attention
+this second level row:  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+full_predicate  http://www.myuso.exp#hasSpaceBoundaryElementMember
+full_predicate  http://www.myuso.exp#belongsToSpaceCollection
+full_predicate  http://www.myuso.exp#belongsToSpaceCollectionLocation
+########################################################################################################
+Now using:  SpaceBoundary http://www.myuso.exp#SpaceBoundary
+http://www.gbxml.org/schema#Surface is a http://www.myuso.exp#SpaceBoundary
+predicate_list  ['hasSpaceBoundaryElementMember', 'belongsToSpace', 'belongsToSpaceCollection', 'belongsToSpaceCollectionLocation']
+-----------------next_level_search
+http://www.myuso.exp#SpaceBoundary
+i 4 SpaceBoundary
+full_predicate  http://www.myuso.exp#hasSpaceBoundaryElementMember
+reaching parts sequence
+getting to the recursion
+isDefinedBy data:
+DefinedBy is not nil...but at this point has been handled by l_list_data in deeper function
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#rest'), rdflib.term.BNode('ub2bL184C44'), rdflib.term.BNode('ub2bL183C33'))
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#first'), rdflib.term.BNode('f4cd68bcecd1d4617aba6882923fc6f77b22'), rdflib.term.BNode('ub2bL183C33'))
+getting to the recursion
+getting to the recursion
+e_here
+list continues with blank node ub2bL168C42
+getting to the recursion
+e_here
+l_here
+l_here
+list continues with blank node f4cd68bcecd1d4617aba6882923fc6f77b20
+getting to the recursion
+root_att_data_list needs attention:  ['http://www.gbxml.org/schema#id', 'http://www.gbxml.org/schema#constructionIdRef']
+startPathDeeperData:  ['/gb:gbXML/gb:Campus/gb:Surface']
+l_data_list :  ['http://www.gbxml.org/schema#AdjacentSpaceId']
+item in l_data_list:  http://www.gbxml.org/schema#AdjacentSpaceId
+this second level row:  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+this second level row:  f4cd68bcecd1d4617aba6882923fc6f77b24
+data_list ['f4cd68bcecd1d4617aba6882923fc6f77b24']
+getting to the recursion
+getting to the recursion
+Use these different pieces to query xml instance
+start path 1----- /gb:gbXML/gb:Campus/gb:Surface [<Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, <Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, <Element {http://www.gbxml.org/schema}Surface at 0x5e45ab0>, <Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, <Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>]
+and [<Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, <Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, <Element {http://www.gbxml.org/schema}Surface at 0x5e45ab0>, <Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, <Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>]
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary1 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundary
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Material'), rdflib.term.BNode('ub2bL213C31'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Surface /gb:gbXML/gb:Material
+start path 2 /gb:gbXML/gb:Material
+just stored:  SpaceBoundaryElement 10
+linkedC http://www.gbxml.org/schema#Surface http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+original_level_data (<Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0079']])
+original_level_data:  (<Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0079']])
+current_level_data
+[('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54f78>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54510>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e548b8>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54e10>)]
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary1 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement1
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement1 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary1 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement2
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement2 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary1 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement3
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement3 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary1 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement4
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement4 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+passed
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary2 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundary
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Material'), rdflib.term.BNode('ub2bL213C31'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Surface /gb:gbXML/gb:Material
+start path 2 /gb:gbXML/gb:Material
+just stored:  SpaceBoundaryElement 10
+linkedC http://www.gbxml.org/schema#Surface http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+original_level_data (<Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0079']])
+original_level_data:  (<Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0079']])
+current_level_data
+[('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54438>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54e10>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54e58>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54708>)]
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary2 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement5
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement5 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary2 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement6
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement6 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary2 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement7
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement7 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary2 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement8
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement8 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+passed
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary3 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundary
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Material'), rdflib.term.BNode('ub2bL213C31'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Surface /gb:gbXML/gb:Material
+start path 2 /gb:gbXML/gb:Material
+just stored:  SpaceBoundaryElement 10
+linkedC http://www.gbxml.org/schema#Surface http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+original_level_data (<Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0079']])
+original_level_data:  (<Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0079']])
+current_level_data
+[('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e541b0>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54708>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54a68>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54f78>)]
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary3 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement9
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement9 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary3 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement10
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement10 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary3 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement11
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement11 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary3 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement12
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement12 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+passed
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary4 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundary
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Material'), rdflib.term.BNode('ub2bL213C31'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Surface /gb:gbXML/gb:Material
+start path 2 /gb:gbXML/gb:Material
+just stored:  SpaceBoundaryElement 10
+linkedC http://www.gbxml.org/schema#Surface http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+original_level_data (<Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0079']])
+original_level_data:  (<Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0079']])
+current_level_data
+[('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54318>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54f78>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e548b8>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54438>)]
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary4 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement13
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement13 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary4 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement14
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement14 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary4 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement15
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement15 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary4 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement16
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement16 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+passed
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary5 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundary
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Material'), rdflib.term.BNode('ub2bL213C31'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Surface /gb:gbXML/gb:Material
+start path 2 /gb:gbXML/gb:Material
+just stored:  SpaceBoundaryElement 10
+linkedC http://www.gbxml.org/schema#Surface http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+original_level_data (<Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0130']])
+original_level_data:  (<Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0130']])
+current_level_data
+[('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e3a288>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54438>), ('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e54e58>)]
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary5 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement17
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement17 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary5 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement18
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement18 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary5 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement19
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement19 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+passed
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary6 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundary
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Material'), rdflib.term.BNode('ub2bL213C31'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Surface /gb:gbXML/gb:Material
+start path 2 /gb:gbXML/gb:Material
+just stored:  SpaceBoundaryElement 10
+linkedC http://www.gbxml.org/schema#Surface http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+original_level_data (<Element {http://www.gbxml.org/schema}Surface at 0x5e45ab0>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0066']])
+original_level_data:  (<Element {http://www.gbxml.org/schema}Surface at 0x5e45ab0>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', 'aim0066']])
+current_level_data
+[('http://www.gbxml.org/schema#unit', 'Meters', <Element {http://www.gbxml.org/schema}Thickness at 0x5e4cf30>)]
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary6 http://www.sw.org/UBO#hasSpaceBoundaryElementMember http://www.sw.org/UBO#SpaceBoundaryElement20
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundaryElement20 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundaryElement
+passed
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary7 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundary
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Material'), rdflib.term.BNode('ub2bL213C31'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Surface /gb:gbXML/gb:Material
+start path 2 /gb:gbXML/gb:Material
+just stored:  SpaceBoundaryElement 10
+linkedC http://www.gbxml.org/schema#Surface http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+original_level_data (<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', None]])
+original_level_data:  (<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', None]])
+No next level data available so not adding triples
+passed
+at what level
+-----------ADDED----------- http://www.sw.org/UBO#SpaceBoundary8 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.sw.org/UBO#SpaceBoundary
+rowb... (rdflib.term.URIRef(u'http://www.gbxml.org/schema#Material'), rdflib.term.BNode('ub2bL213C31'))
+HERE!
+getting to the recursion
+pulling start paths: /gb:gbXML/gb:Campus/gb:Surface /gb:gbXML/gb:Material
+start path 2 /gb:gbXML/gb:Material
+just stored:  SpaceBoundaryElement 10
+linkedC http://www.gbxml.org/schema#Surface http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+original_level_data (<Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', None]])
+original_level_data:  (<Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>, ['http://www.gbxml.org/schema#constructionIdRef', 'http://www.gbxml.org/schema#id'], [['http://www.gbxml.org/schema#constructionIdRef', None]])
+No next level data available so not adding triples
+passed
+used this one
+testing current_data_type SpaceBoundary fdata
+hasRootGeometry in addCoordinateData ['f4cd68bcecd1d4617aba6882923fc6f77b22', 'f4cd68bcecd1d4617aba6882923fc6f77b23']
+self.xml_instance_tracking  31 {rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'): [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'), 'SpaceCollectionLocation', [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement8'): ['aim0105', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement8'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement9'): ['aim0084', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement9'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement4'): ['aim0105', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement4'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement5'): ['aim0084', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement5'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement6'): ['aim0091', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement6'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement7'): ['aim0098', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement7'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement1'): ['aim0084', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement1'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement2'): ['aim0091', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement2'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement3'): ['aim0098', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement3'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollection1'): [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollection1'), 'SpaceCollection', [<Element {http://www.gbxml.org/schema}Space at 0x5e45cf0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement18'): ['aim0142', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement18'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0135', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54c60>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0142', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54318>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0149', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54a68>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement19'): ['aim0149', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement19'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0135', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54c60>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0142', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54318>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0149', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54a68>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement16'): ['aim0105', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement16'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement17'): ['aim0135', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement17'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0135', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54c60>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0142', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54318>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0149', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54a68>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement14'): ['aim0091', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement14'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement15'): ['aim0098', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement15'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement12'): ['aim0105', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement12'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement13'): ['aim0084', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement13'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement10'): ['aim0091', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement10'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement11'): ['aim0098', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement11'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary1'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary1'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary3'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary3'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary2'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary2'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary5'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary5'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary4'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary4'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary7'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary7'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary6'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45ab0>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary6'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary8'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary8'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#Space1'): [<Element {http://www.gbxml.org/schema}Space at 0x5e45cf0>, rdflib.term.URIRef(u'http://www.sw.org/UBO#Space1'), 'Space', [<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, <Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>], None, 0, [[(-18.0722, 2.497701, 0.0), (-22.48886, 10.14759, 0.0), (-6.178719, 19.56426, 0.0), (-1.762052, 11.91437, 0.0)], [(-22.48886, 10.14759, 0.0), (-22.48886, 10.14759, 10.0), (-6.178719, 19.56426, 10.0), (-6.178719, 19.56426, 0.0)], [(-18.0722, 2.497701, 0.0), (-18.0722, 2.497701, 10.0), (-22.48886, 10.14759, 10.0), (-22.48886, 10.14759, 0.0)], [(-18.0722, 2.497701, 0.0), (-1.762052, 11.91437, 0.0), (-1.762052, 11.91437, 10.0), (-18.0722, 2.497701, 10.0)], [(-1.762052, 11.91437, 0.0), (-6.178719, 19.56426, 0.0), (-6.178719, 19.56426, 10.0), (-1.762052, 11.91437, 10.0)], [(-18.0722, 2.497701, 10.0), (-1.762052, 11.91437, 10.0), (-6.178719, 19.56426, 10.0), (-22.48886, 10.14759, 10.0)]]], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement20'): ['aim0071', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement20'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0071', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e3a288>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45ab0>, 0, 0]}
+processing root geometries
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+case 5
+stored  [[(-23.28571, 10.36111, 0.0), (-23.28571, 10.36111, 11.0625), (-5.965204, 20.36111, 11.0625), (-5.965204, 20.36111, 0.0)]]
+stored  [[(-18.28571, 1.700853, 0.0), (-0.9652041, 11.70085, 0.0), (-0.9652041, 11.70085, 11.0625), (-18.28571, 1.700853, 11.0625)]]
+stored  [[(-23.28571, 10.36111, 0.0), (-18.28571, 1.700853, 0.0), (-18.28571, 1.700853, 11.0625), (-23.28571, 10.36111, 11.0625)]]
+stored  [[(-23.28571, 10.36111, 11.0625), (-18.28571, 1.700853, 11.0625), (-0.9652041, 11.70085, 11.0625), (-5.965204, 20.36111, 11.0625)]]
+stored  [[(-5.965204, 20.36111, 0.0), (-5.965204, 20.36111, 11.0625), (-0.9652041, 11.70085, 11.0625), (-0.9652041, 11.70085, 0.0)]]
+stored  [[(-24.08256, 10.57462, 11.0625), (-18.49923, 0.9040052, 11.0625), (-18.28571, 1.700853, 11.0625), (-23.28571, 10.36111, 11.0625)]]
+stored  [[(-23.28571, 10.36111, 0.0), (-5.965204, 20.36111, 0.0), (-0.9652041, 11.70085, 0.0), (-18.28571, 1.700853, 0.0)]]
+stored  [[(-24.08256, 10.57462, 11.0625), (-23.28571, 10.36111, 11.0625), (-5.965204, 20.36111, 11.0625), (-0.9652039, 11.70085, 11.0625), (-18.28571, 1.700853, 11.0625), (-18.49923, 0.9040052, 11.0625), (-0.1683558, 11.48734, 11.0625), (-5.751689, 21.15796, 11.0625)]]
+getting to the recursion
+getting to the recursion
+case 4, temporarily solved by case 2, since for gbxml thus far these levels are interdependent...
+fdata section needs attention
+full_predicate  http://www.myuso.exp#belongsToSpace
+full_predicate  http://www.myuso.exp#belongsToSpaceCollection
+full_predicate  http://www.myuso.exp#belongsToSpaceCollectionLocation
+########################################################################################################
+Now using:  SpaceBoundaryElement http://www.myuso.exp#SpaceBoundaryElement
+http://www.gbxml.org/schema#Material is a http://www.myuso.exp#SpaceBoundaryElement
+predicate_list  ['belongsToSpaceBoundary', 'belongsToSpace', 'belongsToSpaceCollection', 'belongsToSpaceCollectionLocation']
+-----------------next_level_search
+http://www.myuso.exp#SpaceBoundaryElement
+i 5 SpaceBoundaryElement
+full_predicate  http://www.myuso.exp#hasLastDataSet
+reaching parts sequence
+isDefinedBy data:
+DefinedBy is nil...passed since types are processed already alter on
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#rest'), rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#nil'), rdflib.term.BNode('ub2bL226C34'))
+checking the rows:  (rdflib.term.URIRef(u'http://www.w3.org/1999/02/22-rdf-syntax-ns#first'), rdflib.term.BNode('f4cd68bcecd1d4617aba6882923fc6f77b28'), rdflib.term.BNode('ub2bL226C34'))
+getting to the recursion
+e_here
+e_here
+list continues with blank node ub2bL214C42
+getting to the recursion
+l_here
+l_here
+list continues with blank node f4cd68bcecd1d4617aba6882923fc6f77b27
+getting to the recursion
+root_att_data_list needs attention:  ['http://www.gbxml.org/schema#id']
+startPathDeeperData:  ['/gb:gbXML/gb:Material']
+l_data_list :  ['http://www.gbxml.org/schema#Thickness']
+item in l_data_list:  http://www.gbxml.org/schema#Thickness
+this second level row:  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+this second level row:  f4cd68bcecd1d4617aba6882923fc6f77b29
+data_list ['f4cd68bcecd1d4617aba6882923fc6f77b29']
+getting to the recursion
+getting to the recursion
+getting to the recursion
+getting to the recursion
+Use these different pieces to query xml instance
+and []
+used this one
+testing current_data_type SpaceBoundaryElement bdata
+hasRootGeometry in addCoordinateData ['f4cd68bcecd1d4617aba6882923fc6f77b28']
+self.xml_instance_tracking  31 {rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'): [<Element {http://www.gbxml.org/schema}Location at 0x5e3af78>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollectionLocation1'), 'SpaceCollectionLocation', [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement8'): ['aim0105', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement8'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement9'): ['aim0084', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement9'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement4'): ['aim0105', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement4'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement5'): ['aim0084', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement5'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement6'): ['aim0091', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement6'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement7'): ['aim0098', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement7'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement1'): ['aim0084', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement1'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement2'): ['aim0091', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement2'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement3'): ['aim0098', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement3'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollection1'): [<Element {http://www.gbxml.org/schema}Building at 0x5e40a20>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceCollection1'), 'SpaceCollection', [<Element {http://www.gbxml.org/schema}Space at 0x5e45cf0>], None, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement18'): ['aim0142', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement18'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0135', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54c60>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0142', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54318>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0149', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54a68>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement19'): ['aim0149', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement19'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0135', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54c60>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0142', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54318>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0149', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54a68>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement16'): ['aim0105', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement16'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement17'): ['aim0135', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement17'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0135', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54c60>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0142', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54318>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0149', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54a68>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement14'): ['aim0091', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement14'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement15'): ['aim0098', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement15'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement12'): ['aim0105', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement12'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement13'): ['aim0084', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement13'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement10'): ['aim0091', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement10'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement11'): ['aim0098', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement11'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0084', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54870>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0091', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54ea0>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0098', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54948>), ('http://www.gbxml.org/schema#materialIdRef', 'aim0105', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e54480>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, 0, 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary1'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45048>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary1'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, [[(-23.28571, 10.36111, 0.0), (-23.28571, 10.36111, 11.0625), (-5.965204, 20.36111, 11.0625), (-5.965204, 20.36111, 0.0)]], 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary3'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45e58>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary3'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, [[(-18.28571, 1.700853, 0.0), (-0.9652041, 11.70085, 0.0), (-0.9652041, 11.70085, 11.0625), (-18.28571, 1.700853, 11.0625)]], 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary2'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e453f0>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary2'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, [[(-23.28571, 10.36111, 0.0), (-18.28571, 1.700853, 0.0), (-18.28571, 1.700853, 11.0625), (-23.28571, 10.36111, 11.0625)]], 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary5'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45750>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary5'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, [[(-23.28571, 10.36111, 11.0625), (-18.28571, 1.700853, 11.0625), (-0.9652041, 11.70085, 11.0625), (-5.965204, 20.36111, 11.0625)]], 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary4'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45bd0>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary4'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, [[(-5.965204, 20.36111, 0.0), (-5.965204, 20.36111, 11.0625), (-0.9652041, 11.70085, 11.0625), (-0.9652041, 11.70085, 0.0)]], 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary7'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary7'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, [[(-24.08256, 10.57462, 11.0625), (-18.49923, 0.9040052, 11.0625), (-18.28571, 1.700853, 11.0625), (-23.28571, 10.36111, 11.0625)]], 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary6'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e45ab0>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary6'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, [[(-23.28571, 10.36111, 0.0), (-5.965204, 20.36111, 0.0), (-0.9652041, 11.70085, 0.0), (-18.28571, 1.700853, 0.0)]], 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary8'): [<Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>, rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundary8'), 'SpaceBoundary', [<Element {http://www.gbxml.org/schema}Material at 0x5e4c708>, <Element {http://www.gbxml.org/schema}Material at 0x5e4cd38>, <Element {http://www.gbxml.org/schema}Material at 0x5e4c2d0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54af8>, <Element {http://www.gbxml.org/schema}Material at 0x5e54828>, <Element {http://www.gbxml.org/schema}Material at 0x5e54d38>, <Element {http://www.gbxml.org/schema}Material at 0x5e54bd0>, <Element {http://www.gbxml.org/schema}Material at 0x5e54c18>, <Element {http://www.gbxml.org/schema}Material at 0x5e54b40>, <Element {http://www.gbxml.org/schema}Material at 0x5e54ab0>], None, [[(-24.08256, 10.57462, 11.0625), (-23.28571, 10.36111, 11.0625), (-5.965204, 20.36111, 11.0625), (-0.9652039, 11.70085, 11.0625), (-18.28571, 1.700853, 11.0625), (-18.49923, 0.9040052, 11.0625), (-0.1683558, 11.48734, 11.0625), (-5.751689, 21.15796, 11.0625)]], 0], rdflib.term.URIRef(u'http://www.sw.org/UBO#Space1'): [<Element {http://www.gbxml.org/schema}Space at 0x5e45cf0>, rdflib.term.URIRef(u'http://www.sw.org/UBO#Space1'), 'Space', [<Element {http://www.gbxml.org/schema}Surface at 0x5e4c048>, <Element {http://www.gbxml.org/schema}Surface at 0x5e4c948>], None, 0, [[(-18.0722, 2.497701, 0.0), (-22.48886, 10.14759, 0.0), (-6.178719, 19.56426, 0.0), (-1.762052, 11.91437, 0.0)], [(-22.48886, 10.14759, 0.0), (-22.48886, 10.14759, 10.0), (-6.178719, 19.56426, 10.0), (-6.178719, 19.56426, 0.0)], [(-18.0722, 2.497701, 0.0), (-18.0722, 2.497701, 10.0), (-22.48886, 10.14759, 10.0), (-22.48886, 10.14759, 0.0)], [(-18.0722, 2.497701, 0.0), (-1.762052, 11.91437, 0.0), (-1.762052, 11.91437, 10.0), (-18.0722, 2.497701, 10.0)], [(-1.762052, 11.91437, 0.0), (-6.178719, 19.56426, 0.0), (-6.178719, 19.56426, 10.0), (-1.762052, 11.91437, 10.0)], [(-18.0722, 2.497701, 10.0), (-1.762052, 11.91437, 10.0), (-6.178719, 19.56426, 10.0), (-22.48886, 10.14759, 10.0)]]], rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement20'): ['aim0071', rdflib.term.URIRef(u'http://www.sw.org/UBO#SpaceBoundaryElement20'), 'SpaceBoundaryElement', [('http://www.gbxml.org/schema#materialIdRef', 'aim0071', <Element {http://www.gbxml.org/schema}MaterialId at 0x5e3a288>)], <Element {http://www.gbxml.org/schema}Surface at 0x5e45ab0>, 0, 0]}
+processing root geometries
+getting to the recursion
+getting to the recursion
+somewhere see if 2D data exists for this thing then can recall to get 3D when data is insufficient to make 3D from what is given but indicated needs external function
+case 2a
+reaching the depth-search version, len(currentDataPathsList):  0
+after data_for_surface_dict: 
+Add stuff for:  SpaceBoundaryElement
+########################################################################################################
+Does this make sense?
+@prefix ns1: <http://www.sw.org/UBO#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:GeoInstance1 a <http://www.myuso.exp#GeoInstance> ;
+    ns1:hasSpatialCollectionLocationMember ns1:SpaceCollectionLocation1 .
+
+ns1:Property1 ns1:hasType "gb:Latitude" ;
+    ns1:hasValue 4.235843e+01 .
+
+ns1:Property10 ns1:hasType "2DSpaceBoundaryCoordinates" ;
+    ns1:hasValue "[[(-5.965204, 20.36111, 0.0), (-5.965204, 20.36111, 11.0625), (-0.9652041, 11.70085, 11.0625), (-0.9652041, 11.70085, 0.0)]]" .
+
+ns1:Property11 ns1:hasType "2DSpaceBoundaryCoordinates" ;
+    ns1:hasValue "[[(-24.08256, 10.57462, 11.0625), (-18.49923, 0.9040052, 11.0625), (-18.28571, 1.700853, 11.0625), (-23.28571, 10.36111, 11.0625)]]" .
+
+ns1:Property12 ns1:hasType "2DSpaceBoundaryCoordinates" ;
+    ns1:hasValue "[[(-23.28571, 10.36111, 0.0), (-5.965204, 20.36111, 0.0), (-0.9652041, 11.70085, 0.0), (-18.28571, 1.700853, 0.0)]]" .
+
+ns1:Property13 ns1:hasType "2DSpaceBoundaryCoordinates" ;
+    ns1:hasValue "[[(-24.08256, 10.57462, 11.0625), (-23.28571, 10.36111, 11.0625), (-5.965204, 20.36111, 11.0625), (-0.9652039, 11.70085, 11.0625), (-18.28571, 1.700853, 11.0625), (-18.49923, 0.9040052, 11.0625), (-0.1683558, 11.48734, 11.0625), (-5.751689, 21.15796, 11.0625)]]" .
+
+ns1:Property2 ns1:hasType "gb:Longitude" ;
+    ns1:hasValue -7.105978e+01 .
+
+ns1:Property3 ns1:hasType "gb:Elevation" ;
+    ns1:hasValue 1.6e+01 .
+
+ns1:Property4 ns1:hasType "gb:Area" ;
+    ns1:hasValue 2e+02 .
+
+ns1:Property5 ns1:hasType "3DSpaceCoordinates" ;
+    ns1:hasValue "[[(-18.0722, 2.497701, 0.0), (-22.48886, 10.14759, 0.0), (-6.178719, 19.56426, 0.0), (-1.762052, 11.91437, 0.0)], [(-22.48886, 10.14759, 0.0), (-22.48886, 10.14759, 10.0), (-6.178719, 19.56426, 10.0), (-6.178719, 19.56426, 0.0)], [(-18.0722, 2.497701, 0.0), (-18.0722, 2.497701, 10.0), (-22.48886, 10.14759, 10.0), (-22.48886, 10.14759, 0.0)], [(-18.0722, 2.497701, 0.0), (-1.762052, 11.91437, 0.0), (-1.762052, 11.91437, 10.0), (-18.0722, 2.497701, 10.0)], [(-1.762052, 11.91437, 0.0), (-6.178719, 19.56426, 0.0), (-6.178719, 19.56426, 10.0), (-1.762052, 11.91437, 10.0)], [(-18.0722, 2.497701, 10.0), (-1.762052, 11.91437, 10.0), (-6.178719, 19.56426, 10.0), (-22.48886, 10.14759, 10.0)]]" .
+
+ns1:Property6 ns1:hasType "2DSpaceBoundaryCoordinates" ;
+    ns1:hasValue "[[(-23.28571, 10.36111, 0.0), (-23.28571, 10.36111, 11.0625), (-5.965204, 20.36111, 11.0625), (-5.965204, 20.36111, 0.0)]]" .
+
+ns1:Property7 ns1:hasType "2DSpaceBoundaryCoordinates" ;
+    ns1:hasValue "[[(-18.28571, 1.700853, 0.0), (-0.9652041, 11.70085, 0.0), (-0.9652041, 11.70085, 11.0625), (-18.28571, 1.700853, 11.0625)]]" .
+
+ns1:Property8 ns1:hasType "2DSpaceBoundaryCoordinates" ;
+    ns1:hasValue "[[(-23.28571, 10.36111, 0.0), (-18.28571, 1.700853, 0.0), (-18.28571, 1.700853, 11.0625), (-23.28571, 10.36111, 11.0625)]]" .
+
+ns1:Property9 ns1:hasType "2DSpaceBoundaryCoordinates" ;
+    ns1:hasValue "[[(-23.28571, 10.36111, 11.0625), (-18.28571, 1.700853, 11.0625), (-0.9652041, 11.70085, 11.0625), (-5.965204, 20.36111, 11.0625)]]" .
+
+ns1:Space1 a ns1:Space ;
+    ns1:hasProperty ns1:Property5 ;
+    ns1:hasSpaceBoundaryMember ns1:SpaceBoundary1,
+        ns1:SpaceBoundary2,
+        ns1:SpaceBoundary3,
+        ns1:SpaceBoundary4,
+        ns1:SpaceBoundary5,
+        ns1:SpaceBoundary6 .
+
+ns1:SpaceBoundary1 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property6 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement1,
+        ns1:SpaceBoundaryElement2,
+        ns1:SpaceBoundaryElement3,
+        ns1:SpaceBoundaryElement4 .
+
+ns1:SpaceBoundary2 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property8 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement5,
+        ns1:SpaceBoundaryElement6,
+        ns1:SpaceBoundaryElement7,
+        ns1:SpaceBoundaryElement8 .
+
+ns1:SpaceBoundary3 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property7 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement10,
+        ns1:SpaceBoundaryElement11,
+        ns1:SpaceBoundaryElement12,
+        ns1:SpaceBoundaryElement9 .
+
+ns1:SpaceBoundary4 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property10 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement13,
+        ns1:SpaceBoundaryElement14,
+        ns1:SpaceBoundaryElement15,
+        ns1:SpaceBoundaryElement16 .
+
+ns1:SpaceBoundary5 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property9 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement17,
+        ns1:SpaceBoundaryElement18,
+        ns1:SpaceBoundaryElement19 .
+
+ns1:SpaceBoundary6 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property12 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement20 .
+
+ns1:SpaceBoundary7 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property11 .
+
+ns1:SpaceBoundary8 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property13 .
+
+ns1:SpaceBoundaryElement1 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement10 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement11 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement12 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement13 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement14 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement15 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement16 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement17 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement18 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement19 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement2 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement20 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement3 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement4 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement5 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement6 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement7 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement8 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceBoundaryElement9 a ns1:SpaceBoundaryElement .
+
+ns1:SpaceCollection1 a ns1:SpaceCollection ;
+    ns1:hasProperty ns1:Property4 ;
+    ns1:hasSpaceBoundaryMember ns1:SpaceBoundary7,
+        ns1:SpaceBoundary8 ;
+    ns1:hasSpaceMember ns1:Space1 .
+
+ns1:SpaceCollectionLocation1 a ns1:SpaceCollectionLocation ;
+    ns1:hasProperty ns1:Property1,
+        ns1:Property2,
+        ns1:Property3 ;
+    ns1:hasSpaceCollectionMember ns1:SpaceCollection1 .
+
+
+
+Does this make sense for the JSON-LD part of the processing?
+Main Finished
+Process finished with exit code 0

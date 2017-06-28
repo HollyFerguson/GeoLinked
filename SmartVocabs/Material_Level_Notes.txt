@@ -1,0 +1,166 @@
+
+----------------------------------------------------------------------------
+MATERIALS
+SurfaceBoundaryElement               Material Local Name, Material Local ID
+----------------------------------------------------------------------------
+GBXML:
+/gb:gbXML/gb:Material   id
+/gb:gbXML/gb:Material/gb:Name  OR  /gb:gbXML/gb:Material/gb:Thickness   text
+Pull all Materials at once
+Can get Material Address from parsing along with the associated graph name entry
+
+IFCXML:
+/ifc:IfcMaterialLayerSetUsage/ifc:ForLayerSet/ifc:IfcMaterialLayerSet   ref
+/ifc:IfcMaterialLayerSet/ifc:MaterialLayers/ifc:IfcMaterialLayer   exp:pos(0,1,2,3)   ref
+/ifc:IfcMaterialLayer/ifc:Material/ifc:IfcMaterial   ref  OR  /ifc:IfcMaterialLayer/ifc:LayerThickness   text
+/ifc:IfcMaterial   id
+/ifc:IfcMaterial/ifc:Name
+Pull all IfcMaterialLayer at once with ids...?
+Should have IfcMaterialLayerSetUsage Addresses
+
+CityGML:
+/bldg:boundedBy/bldg:***(WallSurface)/gml:name   text, WallSurface has id
+then goes into LOD and multi-surface, etc.
+Thickness not found yet...just coordinates?
+
+
+
+
+		<IfcMaterialLayer id="i3246">
+			<Material>
+				<IfcMaterial xsi:nil="true" ref="i3232"/>
+			</Material>
+			<LayerThickness>0.1666666667</LayerThickness>
+		</IfcMaterialLayer>
+		
+		<IfcMaterial id="i3232">
+			<Name>Rigid insulation</Name>
+		</IfcMaterial>
+
+----------------------------------------------------------------------------
+STOREY/LEVEL
+Surface                              Storey Level
+----------------------------------------------------------------------------
+GBXML:
+from a /gb:gbXML/gb:Campus/gb:Surface nodes, can get ID ... that matches to a surfaceIDRef
+/gb:gbXML/gb:Campus/gb:Space/gb:SpaceBoundary  than can get a 
+
+
+/gb:gbXML/gb:Campus/gb:Building/gb:BuildingStorey/gb:Name    (Level N)
+/gb:gbXML/gb:Campus/gb:Building/gb:BuildingStorey/gb:Level   (10.0000)
+Then go to /gb:gnXML/gb:Campus/gb:Building/gb:Space   (buildingStoreyIdRef matches BuildingStorey id)
+
+IFCXML:
+IfcBuildingStorey (has ID, Name, and Elevation)
+
+		<IfcBuildingStorey id="i1742">
+			<GlobalId>1kgfr7yHL5MvpAGufxKnNh</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<Name>Level 1</Name>
+			<ObjectPlacement>
+				<IfcLocalPlacement xsi:nil="true" ref="i1740"/>
+			</ObjectPlacement>
+			<LongName>Level 1</LongName>
+			<CompositionType>element</CompositionType>
+			<Elevation>0.</Elevation>
+		</IfcBuildingStorey>
+		<IfcBuildingStorey id="i1748">
+			<GlobalId>1kgfr7yHL5MvpAGufxKpCl</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<Name>Level 2</Name>
+			<ObjectPlacement>
+				<IfcLocalPlacement xsi:nil="true" ref="i1747"/>
+			</ObjectPlacement>
+			<LongName>Level 2</LongName>
+			<CompositionType>element</CompositionType>
+			<Elevation>10.</Elevation>
+		</IfcBuildingStorey>
+--------------------------------------------------------------------------                     IfcBuildingStorey pre_processing_dict and add IfcRelContainedInSpatialStructure pre_processing_dict
+		<IfcRelContainedInSpatialStructure id="i3429">
+			<GlobalId>2JF4e6axWHqu3u0C5FZlmi</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<RelatedElements exp:cType="set">
+				<IfcWallStandardCase xsi:nil="true" ref="i2038"/>
+				<IfcWallStandardCase xsi:nil="true" ref="i2228"/>
+				<IfcWallStandardCase xsi:nil="true" ref="i2317"/>
+				<IfcWallStandardCase xsi:nil="true" ref="i2385"/>
+				<IfcDoor xsi:nil="true" ref="i2615"/>
+				<IfcWindow xsi:nil="true" ref="i2858"/>
+				<IfcWindow xsi:nil="true" ref="i3089"/>
+				<IfcSlab xsi:nil="true" ref="i3155"/>
+			</RelatedElements>
+			<RelatingStructure>
+				<IfcBuildingStorey xsi:nil="true" ref="i1742"/>
+			</RelatingStructure>
+		</IfcRelContainedInSpatialStructure>
+		<IfcRelContainedInSpatialStructure id="i3463">
+			<GlobalId>1ZGO8hrFCHqw0v0066FpFv</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<RelatedElements exp:cType="set">
+				<IfcRoof xsi:nil="true" ref="i3241"/>
+			</RelatedElements>
+			<RelatingStructure>
+				<IfcBuildingStorey xsi:nil="true" ref="i1748"/>
+			</RelatingStructure>
+		</IfcRelContainedInSpatialStructure>
+--------------------------------------------------------------------------
+		<IfcRelSpaceBoundary id="i3645">
+			<GlobalId>1krgXaoez178l01QptN5xM</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<Name>2ndLevel</Name>
+			<RelatingSpace>
+				<IfcSpace xsi:nil="true" ref="i1768"/>
+			</RelatingSpace>
+			<RelatedBuildingElement>
+				<IfcRoof xsi:nil="true" ref="i3241"/>
+			</RelatedBuildingElement>
+			<ConnectionGeometry>
+				<IfcConnectionSurfaceGeometry xsi:nil="true" ref="i1935"/>
+			</ConnectionGeometry>
+			<PhysicalOrVirtualBoundary>physical</PhysicalOrVirtualBoundary>
+			<InternalOrExternalBoundary>external</InternalOrExternalBoundary>
+		</IfcRelSpaceBoundary>
+		  
+
+
+CityGML:
+cityObjectMember/grp:CityObjectGroup   id
+                                    /grp:groupMember   xlink:href  (gets you to Building ID) then Pset_:
+cityObjectMember/bldg:Building/gen:stringAttribute name="Pset_BuildingCommon_NumberOfStoreys" / gen:value
+OR
+cityObjectMember/bldg:Building/bldg:storeysAboveGround or storeysBelowGround
+cityObjectMember/bldg:Building/bldg:storeyHeightsAboveGround
+cityObjectMember/bldg:Building/bldg:measuredHeight
+Nested:
+cityObjectMember/bldg:Building/bldg:consistsOfBuildingPart/bldg:measuredHeight (typ. part of Building)
+(consistsOfBuildingPart) so still use parent values unless different ones list at this level
+
+
+
+	<cityObjectMember>
+		<bldg:Building gml:id="GML_7b1a5a6f-ddad-4c3d-a507-3eb9ee0a8e68">					<- Element ID, this case LOD-0 and LOD-1 are at Building Level
+			<gml:name>Example Building LOD1 </gml:name>										
+			<bldg:measuredHeight uom="#m">5.0</bldg:measuredHeight>
+			<bldg:storeysAboveGround>1</bldg:storeysAboveGround>                            <- Storey Level # i.e. Name, this case LOD-0 and LOD-1 are at Building Level
+			<bldg:storeyHeightsAboveGround uom="#m">3.0</bldg:storeyHeightsAboveGround>     <- Elevation to Level, this case LOD-0 and LOD-1 are at Building Level
+
+
+----------------------------------------------------------------------------
+STRUCTURAL (NON_LEVELS)
+Space Level?                         Storey Level
+----------------------------------------------------------------------------
+GBXML:
+
+IFCXML:
+
+CityGML:

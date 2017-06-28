@@ -1,0 +1,82 @@
+@prefix : <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO> a owl:Ontology ;
+    owl:versionIRI <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO/1.0.0> .
+
+:Value a owl:DatatypeProperty .
+
+:belongsToSpace a owl:ObjectProperty ;
+    rdfs:domain :SpaceBoundary ;
+    rdfs:range :Space .
+
+:belongsToSpaceCollection a owl:ObjectProperty ;
+    rdfs:domain :Space ;
+    rdfs:range :SpaceCollection .
+
+:hasSpaceBoundaryElementMember a owl:ObjectProperty ;
+    rdfs:domain :SpaceBoundary,
+        :SpaceCollectionLocation ;
+    rdfs:range :SpaceBoundaryElement .
+
+:hasSpaceBoundaryMember a owl:ObjectProperty ;
+    rdfs:domain :Space,
+        :SpaceCollectionLocation ;
+    rdfs:range :SpaceBoundary .
+
+:hasSpaceCollectionMember a owl:ObjectProperty ;
+    rdfs:domain :SpaceCollectionLocation ;
+    rdfs:range :SpaceCollection .
+
+:hasSpaceMember a owl:ObjectProperty ;
+    rdfs:domain :SpaceCollection ;
+    rdfs:range :Space .
+
+:hasSpatialCollectionLocationMember a owl:ObjectProperty ;
+    rdfs:domain :ASpatialObject ;
+    rdfs:range :SpaceCollectionLocation .
+
+:hasType a owl:ObjectProperty ;
+    rdfs:domain :Property ;
+    rdfs:range [ a owl:Restriction ;
+            owl:onProperty :Type ;
+            owl:someValuesFrom xsd:string ] ;
+    rdfs:subPropertyOf :hasProperty .
+
+:hasValue a owl:ObjectProperty ;
+    rdfs:domain :Property ;
+    rdfs:subPropertyOf :hasProperty .
+
+:Type a owl:DatatypeProperty .
+
+:ASpatialObject a owl:Class .
+
+:SpaceBoundaryElement a owl:Class ;
+    rdfs:subClassOf :SpaceBoundary .
+
+:hasProperty a owl:ObjectProperty ;
+    rdfs:domain :Space,
+        :SpaceBoundary,
+        :SpaceBoundaryElement,
+        :SpaceCollection,
+        :SpaceCollectionLocation ;
+    rdfs:range :Property .
+
+:Property a owl:Class .
+
+:SpaceBoundary a owl:Class ;
+    rdfs:subClassOf :Space .
+
+:SpaceCollection a owl:Class ;
+    rdfs:subClassOf :SpaceCollectionLocation .
+
+:Space a owl:Class ;
+    rdfs:subClassOf :SpaceCollection .
+
+:SpaceCollectionLocation a owl:Class ;
+    rdfs:subClassOf :ASpatialObject .
+

@@ -1,0 +1,27 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uso: <http://www.myuso.exp#> .
+@prefix geos: <http://schema.org/geo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+@prefix grddl: <https://www.w3.org/2003/g/data-view#> .
+@prefix xslt: <https://www.w3.org/TR/xslt-30/schema-for-xslt30#> .
+@prefix xpath: <https://www.w3.org/TR/1999/REC-xpath-19991116/#> .
+
+@prefix gbxml: <http://www.gbxml.org/schema#> .
+@prefix citygml: <http://www.citygml.org/index.php?id=1540#> .
+@prefix ifcxml: <http://www.buildingsmart-tech.org/ifc/IFC4/final/html/index.htm#> .
+
+
+gbxml:Surface1    "start"^^xsd:string "/gb:gbXML/gb:Campus/gb:Surface"^^xsd:string ;
+                  "id"^^xsd:string "ref:id"^^xsd:string ;
+                  "name"^^xsd:string "path:/gb:CADObjectId"^^xsd:string ;
+                  "coors"^^xsd:string "path:1:/gb:PlanarGeometry/gb:PolyLoop/gb:CartesianPoint"^^xsd:string ;
+                  "coors"^^xsd:string "path:2:/gb:Coordinate"^^xsd:string ;
+                  "group"^^xsd:string "name"^^xsd:string ;
+                  "match"^^xsd:string "/gb:gbXML/gb:Campus/gb:Building/gb:Space/gb:SpaceBoundary"^^xsd:string .
+
+
+

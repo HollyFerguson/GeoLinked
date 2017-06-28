@@ -1,0 +1,73 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uso: <http://www.myuso.exp#> .
+@prefix geos: <http://schema.org/geo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+@prefix grddl: <https://www.w3.org/2003/g/data-view#> .
+@prefix xslt: <https://www.w3.org/TR/xslt-30/schema-for-xslt30#> .
+@prefix xpath: <https://www.w3.org/TR/1999/REC-xpath-19991116/#> .
+
+@prefix gbxml: <http://www.gbxml.org/schema#> .
+@prefix citygml: <http://www.citygml.org/index.php?id=1540#> .
+@prefix ifcxml: <http://www.buildingsmart-tech.org/ifc/IFC4/final/html/index.htm#> .
+
+
+
+ifcxml:IfcMaterialLayer  rdf:type    uso:SpaceBoundaryElement ;
+                 grddl:transformation uso:SpaceBoundaryElement ;
+                 xslt:element "/doc:iso_10303_28/ifc:uos/ifc:IfcMaterialLayer"^^xsd:string ;
+                 rdfs:comment """list says how to get to the types of data we want called Name, ID, Thickness""" ;
+                 xslt:list (
+                            "material_paths"^^xsd:string
+                            [ rdf:first _:b1 ;
+                              rdf:rest [ rdf:first _:b2 ;
+                                         rdf:rest [ rdf:first _:b3 ;
+                                                    rdf:rest rdf:nil ] ] ]
+                           ) ;
+                 xslt:attribute [ rdf:first ifcxml:id ;
+                                  rdf:rest rdf:nil ] ;
+                 rdfs:comment """isDefinedBy says how to match it to set of addresses in the passed dictionary""" ;
+                 rdfs:isDefinedBy _:b0 .
+
+
+
+_:b0  rdfs:comment """first attribute relative to start point and second is match to destination point given""" ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:id ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayer"^^xsd:string ;
+                                     rdf:rest rdf:nil
+                                   ] .
+
+
+
+_:b1  xslt:attribute [ rdf:first ifcxml:ref ;
+                       rdf:rest [rdf:first ifcxml:id ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      rdfs:label "Name"@en ;
+      grddl:transformationProperty [ rdf:first "/ifc:Material/ifc:IfcMaterial"^^xsd:string ;
+                                     rdf:rest [ rdf:first "*/ifc:IfcMaterial/ifc:Name"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b2  xslt:attribute [ rdf:first ifcxml:none ;
+                       rdf:rest [rdf:first ifcxml:none ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      rdfs:label "Thickness"@en ;
+      grddl:transformationProperty [ rdf:first "/ifc:LayerThickness"^^xsd:string ;
+                                     rdf:rest rdf:nil
+                                   ] .
+_:b3  xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest rdf:nil
+                     ] ;
+      rdfs:label "Relative_ID"@en ;
+      grddl:transformationProperty [ rdf:first "none"^^xsd:string ;
+                                     rdf:rest rdf:nil
+                                   ] .
+
+

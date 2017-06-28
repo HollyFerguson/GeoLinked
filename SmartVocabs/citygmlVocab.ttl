@@ -1,0 +1,397 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uso: <http://www.myuso.exp#> .
+@prefix geos: <http://schema.org/geo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+@prefix grddl: <https://www.w3.org/2003/g/data-view#> .
+@prefix xslt: <https://www.w3.org/TR/xslt-30/schema-for-xslt30#> .
+@prefix xpath: <https://www.w3.org/TR/1999/REC-xpath-19991116/#> .
+
+@prefix gbxml: <http://www.gbxml.org/schema#> .
+@prefix citygml: <http://www.citygml.org/index.php?id=1540#> .
+@prefix ifcxml: <http://www.buildingsmart-tech.org/ifc/IFC4/final/html/index.htm#> .
+
+
+citygml:CityModel rdf:type geo:SpatialObject ;
+                rdf:type grddl:RootNode ;
+                rdf:type uso:GeoInstance ;
+                uso:hasSpatialCollectionLocationMember uso:SpaceCollectionLocation ;
+                grddl:transformation xslt:import;
+                rdf:type grddl:RootNode ;
+                rdfs:comment """The order to process in this schema""" ;
+                grddl:transformationProperty [ rdf:first uso:GeoInstance ;
+                                               rdf:rest [rdf:first uso:SpaceCollectionLocation ;
+                                                         rdf:rest [rdf:first uso:SpaceCollection ;
+                                                                   rdf:rest [rdf:first uso:Space ;
+                                                                             rdf:rest [rdf:first uso:SpaceBoundary ;
+                                                                                       rdf:rest [rdf:first uso:SpaceBoundaryElement ;
+                                                                         ] ] ] ] ] ] ;
+                rdfs:comment """xslt:element->"start" means location of root node
+                                xslt:list->"coors" means place of respective coordinate data following fdata formatting
+                                xslt:list->"info" means info points we care about at this level
+                                xslt:list->"idata" means collect these data at current level
+                                xslt:list->"fdata" means at this level follow this path further
+                                xslt:list->"bdata" means from current href start over at main root""" ;
+                xslt:element [ rdf:first "start"^^xsd:string ;
+                               rdf:rest [ rdf:first "/city:CityModel"^^xsd:string ;
+                                          rdf:rest rdf:nil ]
+                             ] ;
+                xslt:attribute [ rdf:first rdf:nil ;
+                                 rdf:rest rdf:nil ] ;
+                xslt:complexType "unnecessary"^^xsd:string ;
+                rdfs:isDefinedBy rdf:nil ;
+                xslt:list [ rdf:first rdf:nil ;
+                            rdf:rest rdf:nil ] ;
+                geo:hasGeometry [ rdf:first rdf:nil ;
+                                   rdf:rest rdf:nil ] .
+								   
+citygml:Envelope  rdf:type uso:SpaceCollectionLocation ;
+				grddl:transformation uso:SpaceCollectionLocation ;
+                uso:hasSpaceCollectionMember uso:SpaceCollection ;
+                xslt:element [ rdf:first "start"^^xsd:string ;
+                               rdf:rest [ rdf:first "/city:CityModel"^^xsd:string ;
+                                          rdf:rest rdf:nil ]
+                             ] ;
+                xslt:list (
+                           "info"^^xsd:string
+                           [ rdf:first citygml:gml:lowerCorner ;
+                             rdf:rest [rdf:first citygml:gml:upperCorner ;
+                                       rdf:rest [rdf:first citygml:Address ;
+												 rdf:rest rdf:nil
+												]
+                                      ]
+                           ]
+                          ) ;
+                xslt:attribute [ rdf:first citygml:srsName ;
+                                 rdf:rest rdf:nil ] ;
+                xslt:complexType "unnecessary"^^xsd:string ;
+                rdfs:isDefinedBy rdf:nil ;
+                geo:hasGeometry [ rdf:first rdf:nil ;
+                                   rdf:rest rdf:nil ] .
+citygml:Address rdf:type geos:GeoCoordinates ;
+               rdfs:isDefinedBy ( _:b0 ) .
+_:b0 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "/city:CityModel/city:cityObjectMember/bldg:Building/bldg:address/city:Address/city:multiPoint/gml:MultiPoint/gml:pointMember/gml:Point/gml:pos"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .
+citygml:gml:lowerCorner rdf:type geos:GeoCoordinates ;
+               rdfs:isDefinedBy ( _:b1 ) .
+_:b1 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "/city:CityModel/gml:boundedBy/gml:Envelope/gml:lowerCorner"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .
+citygml:gml:upperCorner rdf:type geos:GeoCoordinates ;
+                rdfs:isDefinedBy ( _:b2 ) .
+_:b2 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "/city:CityModel/gml:boundedBy/gml:Envelope/gml:upperCorner"^^xsd:string ;
+                                   rdf:rest rdf:nil ] .
+								   
+citygml:cityObjectMember rdf:type uso:SpaceCollection ;
+				 grddl:transformation uso:SpaceCollection ;
+				 uso:hasSpaceMember uso:Space ;
+				 xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "/city:CityModel/city:cityObjectMember"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                              ] ;
+				 xslt:list (
+						    "info"^^xsd:string
+						    [ rdf:first citygml:bldg:Building ;
+							  rdf:rest [ rdf:first citygml:dem:ReliefFeature ;
+										 rdf:rest rdf:nil ] 
+							] 
+						   ) ;
+				 xslt:attribute [ rdf:first citygml:gml:id ;
+                                  rdf:rest rdf:nil ] ;
+                 xslt:complexType "simple"^^xsd:string ;
+                 rdfs:isDefinedBy rdf:nil ;
+                 geo:hasGeometry [ rdf:first _:b3 ;
+                                   rdf:rest rdf:nil ] .
+citygml:bldg:Building rdf:type geos:GeoCoordinates ;
+                      rdfs:isDefinedBy ( _:b3 ) .	
+citygml:dem:ReliefFeature rdf:type geos:GeoCoordinates ;
+                          rdfs:isDefinedBy ( _:b7 ) ;
+						  rdfs:comment    """Feature Expansion To Be Added Later""" .
+								   
+_:b3 rdf:type geo:Geometry ;
+     rdfs:label "3DC"@en ;
+	 rdfs:isDefinedBy [ rdf:first _:b4 ;
+                        rdf:rest [ rdf:first _:b5 ;
+								   rdf:rest [ rdf:first _:b6 ;
+											  rdf:rest rdf:nil ] 
+								 ]
+				      ] ;
+     xslt:element "fdata"^^xsd:string ;
+     grddl:transformationProperty [ rdf:first "some_function_this_level"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .	
+citygml:Comment    rdfs:comment    """b4 and b5 below can pull overall building coordinates because LOD0 defines it""" .
+_:b4  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:placeholder ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/bldg:Building/bldg:boundedBy/bldg:GroundSurface***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b5  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:placeholder ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/bldg:Building/bldg:boundedBy/bldg:RoofSurface***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b6  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:placeholder ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/bldg:Building***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									   
+_:b7 rdf:type geo:Geometry .
+						   
+citygml:gml:CompositeSurface rdf:type uso:Space ;
+				 grddl:transformation uso:Space ;
+				 uso:hasSpaceBoundaryMember uso:SpaceBoundary ;
+				 xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "/city:CityModel/city:cityObjectMember"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                              ] ;
+				 xslt:list (
+						    "info"^^xsd:string
+						    [ rdf:first rdf:nil ;
+							  rdf:rest rdf:nil ] 
+						   ) ;
+				 xslt:attribute [ rdf:first citygml:id ;
+								  rdf:rest [ rdf:first citygml:none ;
+                                             rdf:rest rdf:nil ]
+							   ] ;
+                 xslt:complexType "LinkedG"^^xsd:string ;
+                 rdfs:isDefinedBy rdf:nil ;
+                 geo:hasGeometry [ rdf:first _:b8 ;
+                                   rdf:rest rdf:nil ] .
+_:b8 rdf:type geo:Geometry ;
+     rdfs:label "3DC"@en ;
+	 rdfs:isDefinedBy [ rdf:first _:b9 ;
+                        rdf:rest [ rdf:first _:b10 ;
+								   rdf:rest [ rdf:first _:b11 ;
+											  rdf:rest [ rdf:first _:b12 ;
+														 rdf:rest [ rdf:first _:b13 ;
+																	rdf:rest [ rdf:first _:b14 ;
+																				rdf:rest [ rdf:first _:b15 ;
+																						   rdf:rest [ rdf:first _:b16 ;
+																									  rdf:rest [ rdf:first _:b17 ;
+																												 rdf:rest rdf:nil ]  
+																									]  
+																					     ]  
+																			 ]  
+																  ]  
+													   ]  
+											] 
+								 ]
+				      ] ;
+     xslt:element "fdata"^^xsd:string ;
+     grddl:transformationProperty [ rdf:first "some_function_this_level"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .	
+_:b9  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b10  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b11  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember/gml:OrientableSurface/gml:baseSurface"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b12  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/bldg:consistsOfBuildingPart/bldg:BuildingPart***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b13  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/bldg:consistsOfBuildingPart/bldg:BuildingPart***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b14  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/bldg:consistsOfBuildingPart/bldg:BuildingPart***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember/gml:OrientableSurface/gml:baseSurface"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b15  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/bldg:interiorRoom/bldg:Room***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b16  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/bldg:interiorRoom/bldg:Room***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b17  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/bldg:interiorRoom/bldg:Room***"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember/gml:OrientableSurface/gml:baseSurface"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .		
+								   
+citygml:Surface   rdf:type uso:SpaceBoundary ;
+                grddl:transformation uso:SpaceBoundary ;
+                uso:hasSpaceBoundaryElementMember uso:SpaceBoundaryElement ;
+                xslt:element [ rdf:first "start_previous"^^xsd:string ;
+                                rdf:rest [ rdf:first "non_address_type"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                             ] ;
+                xslt:list (
+                           "info"^^xsd:string
+                           [ rdf:first rdf:nil ;
+                             rdf:rest rdf:nil ]
+                          ) ;
+                xslt:attribute [ rdf:first citygml:id ;
+                                 rdf:rest rdf:nil
+                               ] ;
+                xslt:complexType "fill_in_parents"^^xsd:string ;
+                rdfs:isDefinedBy rdf:nil ;
+                geo:hasGeometry [ rdf:first _:b18 ;
+                                   rdf:rest rdf:nil ] .
+_:b18 rdf:type geo:Geometry ;
+     rdfs:label "3DC"@en ;
+	 rdfs:isDefinedBy [ rdf:first _:b19 ;
+                        rdf:rest [ rdf:first _:b20 ;
+								   rdf:rest rdf:nil
+								 ]
+				      ] ;
+     xslt:element "fdata"^^xsd:string ;
+     grddl:transformationProperty [ rdf:first "some_function_this_level"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .	
+_:b19  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates_ext"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:exterior/gml:LinearRing/gml:posList"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b20  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "ogc_coordinates_int"^^xsd:string ;
+      xslt:attribute [ rdf:first citygml:placeholder ;
+                       rdf:rest [rdf:first citygml:xlink:href ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "/"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/gml:interior/gml:LinearRing/gml:posList"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .				
+								   
+citygml:SurfaceMember   rdf:type uso:SpaceBoundaryElement ;
+                grddl:transformation uso:SpaceBoundaryElement ;
+                uso:hasLastDataSet uso:lastDataSet ;
+                xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "path"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                             ] ;
+                xslt:list (
+                           "info"^^xsd:string
+                           [ rdf:first rdf:nil ;
+                             rdf:rest rdf:nil ]
+                          ) ;
+                xslt:attribute [ rdf:first citygml:id ;
+                                 rdf:rest rdf:nil
+                               ] ;
+                xslt:complexType "unnecessary"^^xsd:string ;
+                rdfs:isDefinedBy rdf:nil ;
+                geo:hasGeometry rdf:nil .									  
+								  
+								  
+								  
+								  
+								  
+								  
+								  
+								  
+								  
+								  
+								  
+								  
+								  
+								  
+								  
+								   

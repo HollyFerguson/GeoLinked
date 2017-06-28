@@ -1,0 +1,165 @@
+
+--------------------------------------------------------------------------------LOD 0
+
+cityObjectMember
+		bldg:Building
+				bldg:lod0FootPrint		/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:lod0RoofEdge		/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+		bldg:Building
+cityObjectMember
+cityObjectMember
+		etc:OtherCityElements such as Topography and Relief Features
+cityObjectMember
+
+--------------------------------------------------------------------------------LOD 1
+
+cityObjectMember
+		bldg:Building
+				bldg:lod1Solid		/gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																						/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																						/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																						/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																						/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																						/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+		bldg:Building
+cityObjectMember
+cityObjectMember
+		etc:OtherCityElements such as Topography and Relief Features
+cityObjectMember
+
+--------------------------------------------------------------------------------LOD2
+
+cityObjectMember
+		bldg:Building
+				bldg:lod2Solid		/gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+				bldg:boundedBy		bldg:GroundSurface		bldg:lod2MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:WallSurface		bldg:lod2MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:RoofSurface		bldg:lod2MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+		bldg:Building
+cityObjectMember
+cityObjectMember
+		etc:OtherCityElements such as Topography and Relief Features
+cityObjectMember
+
+--------------------------------------------------------------------------------LOD2 with Garage Second Room
+
+cityObjectMember
+		bldg:Building
+				bldg:lod2Solid		/gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+				bldg:boundedBy		bldg:GroundSurface		bldg:lod2MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:WallSurface		bldg:lod2MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:RoofSurface		bldg:lod2MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:consistsOfBuildingPart		/bldg:BuildingPart	    /bldg:lod2Solid		/gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember	href#
+																																				/gml:surfaceMember	href#
+																																				/gml:surfaceMember	href#
+																																				/gml:surfaceMember	href#
+																																				/gml:surfaceMember	href#
+																																				/gml:surfaceMember	href#
+																		bldg:boundedBy		bldg:GroundSurface		bldg:lod2MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																		bldg:boundedBy		bldg:WallSurface		bldg:lod2MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																		bldg:boundedBy		bldg:RoofSurface		bldg:lod2MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+		bldg:Building
+cityObjectMember
+cityObjectMember
+		etc:OtherCityElements such as Topography and Relief Features
+cityObjectMember
+
+--------------------------------------------------------------------------------LOD 3
+
+cityObjectMember
+		bldg:Building
+				bldg:lod3Solid		/gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href# ...
+				bldg:boundedBy		bldg:GroundSurface		bldg:lod3MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:WallSurface		bldg:lod3MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:RoofSurface		bldg:lod3MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:WallSurface		bldg:lod3MultiSurface/gml:surfaceMember/gml:CompositeSurface	/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+															bldg:opening/bldg:Door		bldg:lod3MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:RoofSurface		bldg:lod3MultiSurface	/gml:MultiSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																											/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+		bldg:Building
+cityObjectMember
+cityObjectMember
+		etc:OtherCityElements such as Topography and Relief Features
+cityObjectMember
+
+--------------------------------------------------------------------------------LOD 4
+
+cityObjectMember
+		bldg:Building
+				bldg:lod4Solid		/gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href#
+																						/gml:surfaceMember	href# ...
+				bldg:boundedBy		bldg:GroundSurface		bldg:lod4MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:WallSurface		bldg:lod4MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:CompositeSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																																					/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																																					/gml:surfaceMember/gml:Polygon	/gml:exterior/gml:LinearRing/gml:posList
+																																													/gml:interior/gml:LinearRing/gml:posList
+																																													/gml:interior/gml:LinearRing/gml:posList
+																																					/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																																					/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+															bldg:opening/bldg:Window		bldg:lod4MultiSurface	/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:boundedBy		bldg:RoofSurface		bldg:lod4MultiSurface	/gml:MultiSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																											/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+				bldg:interiorRoom/bldg:Room			/bldg:lod4Solid/gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember/gml:OrientableSurface/gml:baseSurface  href#
+																													/gml:surfaceMember/gml:OrientableSurface/gml:baseSurface  href#
+																													/gml:surfaceMember/gml:OrientableSurface/gml:baseSurface  href#
+																													/gml:surfaceMember/gml:OrientableSurface/gml:baseSurface  href# ...
+													/bldg:boundedBy/bldg:InteriorWallSurface/bldg:lod4MultiSurface/gml:MultiSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+													/bldg:boundedBy/bldg:InteriorWallSurface/bldg:lod4MultiSurface/gml:MultiSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+													/bldg:boundedBy/bldg:InteriorWallSurface/bldg:lod4MultiSurface/gml:MultiSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+													/bldg:boundedBy/bldg:InteriorWallSurface/bldg:lod4MultiSurface/gml:MultiSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+													/bldg:boundedBy/bldg:InteriorWallSurface/bldg:lod4MultiSurface/gml:MultiSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+													/bldg:boundedBy/bldg:InteriorWallSurface/bldg:lod4MultiSurface/gml:MultiSurface		/gml:surfaceMember/gml:CompositeSurface 	/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																																													/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																																													/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																																													/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+																							/bldg:opening/bldg:Door/bldg:lod4MultiSurface/gml:MultiSurface/gml:surfaceMember/gml:OrientableSurface/gml:baseSurface  href# ...
+													/bldg:boundedBy/bldg:FloorSurface/bldg:lod4MultiSurface/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+													/bldg:boundedBy/bldg:CeilingSurface/bldg:lod4MultiSurface/gml:MultiSurface/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+													/bldg:interiorFurniture/bldg:BuildingFurniture/bldg:lod4Geometry ...
+		bldg:Building
+cityObjectMember
+cityObjectMember
+		etc:OtherCityElements such as Topography and Relief Features
+cityObjectMember
+
+--------------------------------------------------------------------------------
+
+Spaces Respectively,
+from /bldg:Building       OR from     /bldg:Building/bldg:consistsOfBuildingPart/bldg:BuildingPart        OR from        /bldg:Building/bldg:interiorRoom/bldg:Room
+/bldg:lod1Solid		/gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember/gml:Polygon/gml:exterior/gml:LinearRing/gml:posList
+/bldg:lod2Solid		/gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember	href#
+/bldg:lod4Solid     /gml:Solid/gml:exterior/gml:CompositeSurface		/gml:surfaceMember/gml:OrientableSurface/gml:baseSurface  href#
+------------------
+these are the groups of surfaces, so need a way to ID them...may with the tree node?   
+But is the case where we are gathering the surface ids with the space, like gbxml style then matching that id below somewhere...
+CompositeSurface can be the Space Node, to save as a space where we can simultaneously get the set of hrefs for surfaces therein
+
+
+
+
+
+
+
+
+
+
+

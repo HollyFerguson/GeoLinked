@@ -1,0 +1,325 @@
+@prefix ns1: <#SpaceBoundaryElement8:> .
+@prefix ns10: <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#ASpatialObject:> .
+@prefix ns11: <#SpaceBoundaryElement1:> .
+@prefix ns12: <#SpaceBoundary1:> .
+@prefix ns13: <#SpaceBoundaryElement6:> .
+@prefix ns14: <#SpaceBoundary2:> .
+@prefix ns15: <#SpaceBoundaryElement11:> .
+@prefix ns16: <#SpaceBoundary8:> .
+@prefix ns17: <#SpaceBoundary6:> .
+@prefix ns18: <#SpaceBoundaryElement12:> .
+@prefix ns19: <#SpaceBoundary7:> .
+@prefix ns2: <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space:> .
+@prefix ns20: <#SpaceBoundaryElement13:> .
+@prefix ns21: <#SpaceBoundaryElement18:> .
+@prefix ns22: <#SpaceBoundaryElement10:> .
+@prefix ns23: <#SpaceBoundaryElement5:> .
+@prefix ns24: <#SpaceBoundaryElement15:> .
+@prefix ns25: <#SpaceBoundary4:> .
+@prefix ns26: <#SpaceBoundaryElement16:> .
+@prefix ns27: <#SpaceBoundaryElement20:> .
+@prefix ns28: <#SpaceBoundaryElement22:> .
+@prefix ns29: <#SpaceBoundaryElement2:> .
+@prefix ns3: <:> .
+@prefix ns30: <#SpaceBoundary3:> .
+@prefix ns31: <#SpaceBoundaryElement21:> .
+@prefix ns32: <#SpaceBoundary5:> .
+@prefix ns33: <#SpaceBoundaryElement14:> .
+@prefix ns34: <#SpaceBoundaryElement9:> .
+@prefix ns35: <#SpaceBoundaryElement7:> .
+@prefix ns36: <#SpaceBoundaryElement17:> .
+@prefix ns4: <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation:> .
+@prefix ns5: <#SpaceBoundaryElement19:> .
+@prefix ns6: <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection:> .
+@prefix ns7: <#SpaceBoundaryElement4:> .
+@prefix ns8: <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property:> .
+@prefix ns9: <#SpaceBoundaryElement3:> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#GeoInstance1> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#ASpatialObject> ;
+    ns10:hasSpatialCollectionLocationMember <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property1> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceLocationData> ;
+    ns8:hasType "Elevation" ;
+    ns8:hasValue 1.6e+01 .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property2> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceLocationData> ;
+    ns8:hasType "Latitude" ;
+    ns8:hasValue 4.235843e+01 .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property3> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceLocationData> ;
+    ns8:hasType "Longitude" ;
+    ns8:hasValue -7.105978e+01 .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property4> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceMassingData> ;
+    ns8:hasType "Area" ;
+    ns8:hasValue 2e+02 .
+
+<#Space1> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space> ;
+    ns2:hasProperty <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property5> ;
+    ns2:hasSpaceBoundaryMember <#SpaceBoundary1>,
+        <#SpaceBoundary2>,
+        <#SpaceBoundary3>,
+        <#SpaceBoundary4>,
+        <#SpaceBoundary5>,
+        <#SpaceBoundary6> .
+
+<#SpaceBoundary1> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary> ;
+    ns12:hasProperty ns12:SurfaceData2D,
+        ns12:SurfaceData3D ;
+    ns2:hasSpaceBoundaryElementMember <#SpaceBoundaryElement1>,
+        <#SpaceBoundaryElement2>,
+        <#SpaceBoundaryElement3>,
+        <#SpaceBoundaryElement4> .
+
+ns12:SurfaceData2D ns3:hasType "2DSurfaceCoordinates" ;
+    ns3:hasValue "[(-23.28571, 10.36111, 0.0), (-23.28571, 10.36111, 11.0625), (-5.965204, 20.36111, 11.0625), (-5.965204, 20.36111, 0.0)]" .
+
+ns12:SurfaceData3D ns3:hasType "3DSurfaceCoordinates" ;
+    ns3:hasValue "[(-24.19068745823072, 11.928576749514992, 0.0), (-24.19068745823072, 11.928576749514992, 11.0625), (-6.8701814582307188, 21.928576749514992, 11.0625), (-6.8701814582307188, 21.928576749514992, 0.0), (-22.380732541769284, 8.7936432504850082, 0.0), (-22.380732541769284, 8.7936432504850082, 11.0625), (-5.0602265417692811, 18.793643250485008, 11.0625), (-5.0602265417692811, 18.793643250485008, 0.0)]" .
+
+<#SpaceBoundary2> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary> ;
+    ns14:hasProperty ns14:SurfaceData2D,
+        ns14:SurfaceData3D ;
+    ns2:hasSpaceBoundaryElementMember <#SpaceBoundaryElement5>,
+        <#SpaceBoundaryElement6>,
+        <#SpaceBoundaryElement7>,
+        <#SpaceBoundaryElement8> .
+
+ns14:SurfaceData2D ns3:hasType "2DSurfaceCoordinates" ;
+    ns3:hasValue "[(-23.28571, 10.36111, 0.0), (-18.28571, 1.700853, 0.0), (-18.28571, 1.700853, 11.0625), (-23.28571, 10.36111, 11.0625)]" .
+
+ns14:SurfaceData3D ns3:hasType "3DSurfaceCoordinates" ;
+    ns3:hasValue "[(-24.853176930510426, 9.4561328552625969, 0.0), (-19.853176930510426, 0.79587585526259674, 0.0), (-19.853176930510426, 0.79587585526259674, 11.0625), (-24.853176930510426, 9.4561328552625969, 11.0625), (-21.718243069489578, 11.266087144737403, 0.0), (-16.718243069489578, 2.605830144737403, 0.0), (-16.718243069489578, 2.605830144737403, 11.0625), (-21.718243069489578, 11.266087144737403, 11.0625)]" .
+
+<#SpaceBoundary3> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary> ;
+    ns30:hasProperty ns30:SurfaceData2D,
+        ns30:SurfaceData3D ;
+    ns2:hasSpaceBoundaryElementMember <#SpaceBoundaryElement10>,
+        <#SpaceBoundaryElement11>,
+        <#SpaceBoundaryElement12>,
+        <#SpaceBoundaryElement9> .
+
+ns30:SurfaceData2D ns3:hasType "2DSurfaceCoordinates" ;
+    ns3:hasValue "[(-18.28571, 1.700853, 0.0), (-0.9652041, 11.70085, 0.0), (-0.9652041, 11.70085, 11.0625), (-18.28571, 1.700853, 11.0625)]" .
+
+ns30:SurfaceData3D ns3:hasType "3DSurfaceCoordinates" ;
+    ns3:hasValue "[(-17.380732741470553, 0.13338613518742792, 0.0), (-0.060226841470552461, 10.13338313518743, 0.0), (-0.060226841470552461, 10.13338313518743, 11.0625), (-17.380732741470553, 0.13338613518742792, 11.0625), (-19.190687258529451, 3.2683198648125718, 0.0), (-1.8701813585294476, 13.268316864812572, 0.0), (-1.8701813585294476, 13.268316864812572, 11.0625), (-19.190687258529451, 3.2683198648125718, 11.0625)]" .
+
+<#SpaceBoundary4> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary> ;
+    ns25:hasProperty ns25:SurfaceData2D,
+        ns25:SurfaceData3D ;
+    ns2:hasSpaceBoundaryElementMember <#SpaceBoundaryElement13>,
+        <#SpaceBoundaryElement14>,
+        <#SpaceBoundaryElement15>,
+        <#SpaceBoundaryElement16> .
+
+ns25:SurfaceData2D ns3:hasType "2DSurfaceCoordinates" ;
+    ns3:hasValue "[(-5.965204, 20.36111, 0.0), (-5.965204, 20.36111, 11.0625), (-0.9652041, 11.70085, 11.0625), (-0.9652041, 11.70085, 0.0)]" .
+
+ns25:SurfaceData3D ns3:hasType "3DSurfaceCoordinates" ;
+    ns3:hasValue "[(-4.397736925905801, 21.266086896042879, 0.0), (-4.397736925905801, 21.266086896042879, 11.0625), (0.60226297409419893, 12.605826896042878, 11.0625), (0.60226297409419893, 12.605826896042878, 0.0), (-7.5326710740941989, 19.456133103957121, 0.0), (-7.5326710740941989, 19.456133103957121, 11.0625), (-2.5326711740941992, 10.795873103957124, 11.0625), (-2.5326711740941992, 10.795873103957124, 0.0)]" .
+
+<#SpaceBoundary5> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary> ;
+    ns32:hasProperty ns32:SurfaceData2D,
+        ns32:SurfaceData3D ;
+    ns2:hasSpaceBoundaryElementMember <#SpaceBoundaryElement17>,
+        <#SpaceBoundaryElement18>,
+        <#SpaceBoundaryElement19> .
+
+ns32:SurfaceData2D ns3:hasType "2DSurfaceCoordinates" ;
+    ns3:hasValue "[(-23.28571, 10.36111, 11.0625), (-18.28571, 1.700853, 11.0625), (-0.9652041, 11.70085, 11.0625), (-5.965204, 20.36111, 11.0625)]" .
+
+ns32:SurfaceData3D ns3:hasType "3DSurfaceCoordinates" ;
+    ns3:hasValue "[(-23.285710000000002, 10.36111, 12.716196500484958), (-18.285710000000002, 1.7008529999999999, 12.716196500484958), (-0.96520410000000001, 11.700850000000001, 12.716196500484958), (-5.965204, 20.36111, 12.716196500484958), (-23.285710000000002, 10.36111, 9.4088034995150416), (-18.285710000000002, 1.7008529999999999, 9.4088034995150416), (-0.96520410000000001, 11.700850000000001, 9.4088034995150416), (-5.965204, 20.36111, 9.4088034995150416)]" .
+
+<#SpaceBoundary6> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary> ;
+    ns17:hasProperty ns17:SurfaceData2D,
+        ns17:SurfaceData3D ;
+    ns2:hasSpaceBoundaryElementMember <#SpaceBoundaryElement20> .
+
+ns17:SurfaceData2D ns3:hasType "2DSurfaceCoordinates" ;
+    ns3:hasValue "[(-23.28571, 10.36111, 0.0), (-5.965204, 20.36111, 0.0), (-0.9652041, 11.70085, 0.0), (-18.28571, 1.700853, 0.0)]" .
+
+ns17:SurfaceData3D ns3:hasType "3DSurfaceCoordinates" ;
+    ns3:hasValue "[(-23.285710000000002, 10.36111, -1.0505581105587005), (-5.965204, 20.36111, -1.0505581105587005), (-0.96520410000000001, 11.700850000000001, -1.0505581105587005), (-18.285710000000002, 1.7008529999999999, -1.0505581105587005), (-23.285710000000002, 10.36111, 1.0505581105587005), (-5.965204, 20.36111, 1.0505581105587005), (-0.96520410000000001, 11.700850000000001, 1.0505581105587005), (-18.285710000000002, 1.7008529999999999, 1.0505581105587005)]" .
+
+<#SpaceBoundary7> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary> ;
+    ns19:hasProperty ns19:SurfaceData2D,
+        ns19:SurfaceData3D ;
+    ns4:hasSpaceBoundaryElementMember <#SpaceBoundaryElement21> .
+
+ns19:SurfaceData2D ns3:hasType "2DSurfaceCoordinates" ;
+    ns3:hasValue "[(-24.08256, 10.57462, 11.0625), (-18.49923, 0.9040052, 11.0625), (-18.28571, 1.700853, 11.0625), (-23.28571, 10.36111, 11.0625)]" .
+
+ns19:SurfaceData3D ns3:hasType "3DSurfaceCoordinates" ;
+    ns3:hasValue "[(-24.082560000000001, 10.574619999999999, 12.113058110558701), (-18.499230000000001, 0.90400519999999995, 12.113058110558701), (-18.285710000000002, 1.7008529999999999, 12.113058110558701), (-23.285710000000002, 10.36111, 12.113058110558701), (-24.082560000000001, 10.574619999999999, 10.011941889441299), (-18.499230000000001, 0.90400519999999995, 10.011941889441299), (-18.285710000000002, 1.7008529999999999, 10.011941889441299), (-23.285710000000002, 10.36111, 10.011941889441299)]" .
+
+<#SpaceBoundary8> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary> ;
+    ns16:hasProperty ns16:SurfaceData2D,
+        ns16:SurfaceData3D ;
+    ns4:hasSpaceBoundaryElementMember <#SpaceBoundaryElement22> .
+
+ns16:SurfaceData2D ns3:hasType "2DSurfaceCoordinates" ;
+    ns3:hasValue "[(-24.08256, 10.57462, 11.0625), (-23.28571, 10.36111, 11.0625), (-5.965204, 20.36111, 11.0625), (-0.9652039, 11.70085, 11.0625), (-18.28571, 1.700853, 11.0625), (-18.49923, 0.9040052, 11.0625), (-0.1683558, 11.48734, 11.0625), (-5.751689, 21.15796, 11.0625)]" .
+
+ns16:SurfaceData3D ns3:hasType "3DSurfaceCoordinates" ;
+    ns3:hasValue "[(-24.082560000000001, 10.574619999999999, 12.113058110558701), (-23.285710000000002, 10.36111, 12.113058110558701), (-5.965204, 20.36111, 12.113058110558701), (-0.9652039, 11.700850000000001, 12.113058110558701), (-18.285710000000002, 1.7008530000000004, 12.113058110558701), (-18.499230000000001, 0.9040052000000004, 12.113058110558701), (-0.1683558, 11.48734, 12.113058110558701), (-5.7516889999999998, 21.157959999999999, 12.113058110558701), (-24.082560000000001, 10.574619999999999, 10.011941889441299), (-23.285710000000002, 10.36111, 10.011941889441299), (-5.965204, 20.36111, 10.011941889441299), (-0.9652039, 11.700850000000001, 10.011941889441299), (-18.285710000000002, 1.7008529999999995, 10.011941889441299), (-18.499230000000001, 0.90400519999999951, 10.011941889441299), (-0.1683558, 11.48734, 10.011941889441299), (-5.7516889999999998, 21.157959999999999, 10.011941889441299)]" .
+
+<#SpaceBoundaryElement1> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns11:hasProperty ns11:MaterialData3D .
+
+<#SpaceBoundaryElement10> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns22:hasProperty ns22:MaterialData3D .
+
+ns22:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-53.095013784687055, 61.992346245204445, 0.0), (-35.774507884687054, 71.992343245204438, 0.0), (-35.774507884687054, 71.992343245204438, 11.0625), (-53.095013784687055, 61.992346245204445, 11.0625), (-45.952157576043753, 49.62055422320104, 0.0), (-28.631651676043752, 59.620551223201041, 0.0), (-28.631651676043752, 59.620551223201041, 11.0625), (-45.952157576043753, 49.62055422320104, 11.0625)]" .
+
+<#SpaceBoundaryElement11> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns15:hasProperty ns15:MaterialData3D .
+
+ns15:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-65.595012149812831, 83.64298228371041, 0.0), (-48.274506249812831, 93.642979283710389, 0.0), (-48.274506249812831, 93.642979283710389, 11.0625), (-65.595012149812831, 83.64298228371041, 11.0625), (-53.095013784687055, 61.992346245204445, 0.0), (-35.774507884687054, 71.992343245204438, 0.0), (-35.774507884687054, 71.992343245204438, 11.0625), (-53.095013784687055, 61.992346245204445, 11.0625)]" .
+
+<#SpaceBoundaryElement12> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns18:hasProperty ns18:MaterialData3D .
+
+ns18:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-65.595012149812831, 83.64298228371041, 0.0), (-48.274506249812831, 93.642979283710389, 0.0), (-48.274506249812831, 93.642979283710389, 11.0625), (-65.595012149812831, 83.64298228371041, 11.0625), (-19.190687258529451, 3.2683198648125718, 0.0), (-1.8701813585294476, 13.268316864812572, 0.0), (-1.8701813585294476, 13.268316864812572, 11.0625), (-19.190687258529451, 3.2683198648125718, 11.0625)]" .
+
+<#SpaceBoundaryElement13> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns20:hasProperty ns20:MaterialData3D .
+
+ns20:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-53.884911621239333, -7.305326494311462, 0.0), (-53.884911621239333, -7.305326494311462, 11.0625), (-48.884911721239327, -15.965586494311463, 11.0625), (-48.884911721239327, -15.965586494311463, 0.0), (-4.397736925905801, 21.266086896042879, 0.0), (-4.397736925905801, 21.266086896042879, 11.0625), (0.60226297409419893, 12.605826896042878, 11.0625), (0.60226297409419893, 12.605826896042878, 0.0)]" .
+
+<#SpaceBoundaryElement14> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns33:hasProperty ns33:MaterialData3D .
+
+ns33:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-66.25670529507272, -14.448179841900046, 0.0), (-66.25670529507272, -14.448179841900046, 11.0625), (-61.256705395072707, -23.108439841900047, 11.0625), (-61.256705395072707, -23.108439841900047, 0.0), (-53.884911621239333, -7.305326494311462, 0.0), (-53.884911621239333, -7.305326494311462, 11.0625), (-48.884911721239327, -15.965586494311463, 11.0625), (-48.884911721239327, -15.965586494311463, 0.0)]" .
+
+<#SpaceBoundaryElement15> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns24:hasProperty ns24:MaterialData3D .
+
+ns24:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-87.907344224281147, -26.948173200180072, 0.0), (-87.907344224281147, -26.948173200180072, 11.0625), (-82.907344324281127, -35.608433200180073, 11.0625), (-82.907344324281127, -35.608433200180073, 0.0), (-66.25670529507272, -14.448179841900046, 0.0), (-66.25670529507272, -14.448179841900046, 11.0625), (-61.256705395072707, -23.108439841900047, 11.0625), (-61.256705395072707, -23.108439841900047, 0.0)]" .
+
+<#SpaceBoundaryElement16> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns26:hasProperty ns26:MaterialData3D .
+
+ns26:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-87.907344224281147, -26.948173200180072, 0.0), (-87.907344224281147, -26.948173200180072, 11.0625), (-82.907344324281127, -35.608433200180073, 11.0625), (-82.907344324281127, -35.608433200180073, 0.0), (-7.5326710740941989, 19.456133103957121, 0.0), (-7.5326710740941989, 19.456133103957121, 11.0625), (-2.5326711740941992, 10.795873103957124, 11.0625), (-2.5326711740941992, 10.795873103957124, 0.0)]" .
+
+<#SpaceBoundaryElement17> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns36:hasProperty ns36:MaterialData3D .
+
+ns36:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-23.285710000000002, 10.36111, 8.7946278730339777), (-18.285710000000002, 1.7008529999999999, 8.7946278730339777), (-0.96520410000000001, 11.700850000000001, 8.7946278730339777), (-5.965204, 20.36111, 8.7946278730339777), (-23.285710000000002, 10.36111, 12.716196500484958), (-18.285710000000002, 1.7008529999999999, 12.716196500484958), (-0.96520410000000001, 11.700850000000001, 12.716196500484958), (-5.965204, 20.36111, 12.716196500484958)]" .
+
+<#SpaceBoundaryElement18> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns21:hasProperty ns21:MaterialData3D .
+
+ns21:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-23.285710000000002, 10.36111, 2.9122749318575067), (-18.285710000000002, 1.7008529999999999, 2.9122749318575067), (-0.96520410000000001, 11.700850000000001, 2.9122749318575067), (-5.965204, 20.36111, 2.9122749318575067), (-23.285710000000002, 10.36111, 8.7946278730339777), (-18.285710000000002, 1.7008529999999999, 8.7946278730339777), (-0.96520410000000001, 11.700850000000001, 8.7946278730339777), (-5.965204, 20.36111, 8.7946278730339777)]" .
+
+<#SpaceBoundaryElement19> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns5:hasProperty ns5:MaterialData3D .
+
+ns5:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-23.285710000000002, 10.36111, 2.9122749318575067), (-18.285710000000002, 1.7008529999999999, 2.9122749318575067), (-0.96520410000000001, 11.700850000000001, 2.9122749318575067), (-5.965204, 20.36111, 2.9122749318575067), (-23.285710000000002, 10.36111, 9.4088034995150416), (-18.285710000000002, 1.7008529999999999, 9.4088034995150416), (-0.96520410000000001, 11.700850000000001, 9.4088034995150416), (-5.965204, 20.36111, 9.4088034995150416)]" .
+
+ns11:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(4.380743681196904, -37.558587698389317, 0.0), (4.380743681196904, -37.558587698389317, 11.0625), (21.701249681196906, -27.558587698389314, 11.0625), (21.701249681196906, -27.558587698389314, 0.0), (-24.19068745823072, 11.928576749514992, 0.0), (-24.19068745823072, 11.928576749514992, 11.0625), (-6.8701814582307188, 21.928576749514992, 11.0625), (-6.8701814582307188, 21.928576749514992, 0.0)]" .
+
+<#SpaceBoundaryElement2> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns29:hasProperty ns29:MaterialData3D .
+
+<#SpaceBoundaryElement20> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns27:hasProperty ns27:MaterialData3D .
+
+ns27:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-23.285710000000002, 10.36111, -1.0505581105587005), (-5.965204, 20.36111, -1.0505581105587005), (-0.96520410000000001, 11.700850000000001, -1.0505581105587005), (-18.285710000000002, 1.7008529999999999, -1.0505581105587005), (-23.285710000000002, 10.36111, 1.0505581105587005), (-5.965204, 20.36111, 1.0505581105587005), (-0.96520410000000001, 11.700850000000001, 1.0505581105587005), (-18.285710000000002, 1.7008529999999999, 1.0505581105587005)]" .
+
+<#SpaceBoundaryElement21> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns31:hasProperty ns31:MaterialData3D .
+
+ns31:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-24.082560000000001, 10.574619999999999, 12.113058110558701), (-18.499230000000001, 0.90400519999999995, 12.113058110558701), (-18.285710000000002, 1.7008529999999999, 12.113058110558701), (-23.285710000000002, 10.36111, 12.113058110558701), (-24.082560000000001, 10.574619999999999, 10.011941889441299), (-18.499230000000001, 0.90400519999999995, 10.011941889441299), (-18.285710000000002, 1.7008529999999999, 10.011941889441299), (-23.285710000000002, 10.36111, 10.011941889441299)]" .
+
+<#SpaceBoundaryElement22> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns28:hasProperty ns28:MaterialData3D .
+
+ns28:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-24.082560000000001, 10.574619999999999, 12.113058110558701), (-23.285710000000002, 10.36111, 12.113058110558701), (-5.965204, 20.36111, 12.113058110558701), (-0.9652039, 11.700850000000001, 12.113058110558701), (-18.285710000000002, 1.7008530000000004, 12.113058110558701), (-18.499230000000001, 0.9040052000000004, 12.113058110558701), (-0.1683558, 11.48734, 12.113058110558701), (-5.7516889999999998, 21.157959999999999, 12.113058110558701), (-24.082560000000001, 10.574619999999999, 10.011941889441299), (-23.285710000000002, 10.36111, 10.011941889441299), (-5.965204, 20.36111, 10.011941889441299), (-0.9652039, 11.700850000000001, 10.011941889441299), (-18.285710000000002, 1.7008529999999995, 10.011941889441299), (-18.499230000000001, 0.90400519999999951, 10.011941889441299), (-0.1683558, 11.48734, 10.011941889441299), (-5.7516889999999998, 21.157959999999999, 10.011941889441299)]" .
+
+ns29:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(11.52360146605381, -49.930378810365397, 0.0), (11.52360146605381, -49.930378810365397, 11.0625), (28.844107466053813, -39.93037881036539, 11.0625), (28.844107466053813, -39.93037881036539, 0.0), (4.380743681196904, -37.558587698389317, 0.0), (4.380743681196904, -37.558587698389317, 11.0625), (21.701249681196906, -27.558587698389314, 11.0625), (21.701249681196906, -27.558587698389314, 0.0)]" .
+
+<#SpaceBoundaryElement3> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns9:hasProperty ns9:MaterialData3D .
+
+ns9:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(24.023602589553398, -71.58101325632353, 0.0), (24.023602589553398, -71.58101325632353, 11.0625), (41.3441085895534, -61.58101325632353, 11.0625), (41.3441085895534, -61.58101325632353, 0.0), (11.52360146605381, -49.930378810365397, 0.0), (11.52360146605381, -49.930378810365397, 11.0625), (28.844107466053813, -39.93037881036539, 11.0625), (28.844107466053813, -39.93037881036539, 0.0)]" .
+
+<#SpaceBoundaryElement4> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns7:hasProperty ns7:MaterialData3D .
+
+ns7:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(24.023602589553398, -71.58101325632353, 0.0), (24.023602589553398, -71.58101325632353, 11.0625), (41.3441085895534, -61.58101325632353, 11.0625), (41.3441085895534, -61.58101325632353, 0.0), (-22.380732541769284, 8.7936432504850082, 0.0), (-22.380732541769284, 8.7936432504850082, 11.0625), (-5.0602265417692811, 18.793643250485008, 11.0625), (-5.0602265417692811, 18.793643250485008, 0.0)]" .
+
+<#SpaceBoundaryElement5> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns23:hasProperty ns23:MaterialData3D .
+
+ns23:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(24.633993231678165, 38.027554097258403, 0.0), (29.633993231678165, 29.367297097258405, 0.0), (29.633993231678165, 29.367297097258405, 11.0625), (24.633993231678165, 38.027554097258403, 11.0625), (-24.853176930510426, 9.4561328552625969, 0.0), (-19.853176930510426, 0.79587585526259674, 0.0), (-19.853176930510426, 0.79587585526259674, 11.0625), (-24.853176930510426, 9.4561328552625969, 11.0625)]" .
+
+<#SpaceBoundaryElement6> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns13:hasProperty ns13:MaterialData3D .
+
+ns13:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(37.005785772225309, 45.170409407757354, 0.0), (42.005785772225309, 36.51015240775736, 0.0), (42.005785772225309, 36.51015240775736, 11.0625), (37.005785772225309, 45.170409407757354, 11.0625), (24.633993231678165, 38.027554097258403, 0.0), (29.633993231678165, 29.367297097258405, 0.0), (29.633993231678165, 29.367297097258405, 11.0625), (24.633993231678165, 38.027554097258403, 11.0625)]" .
+
+<#SpaceBoundaryElement7> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns35:hasProperty ns35:MaterialData3D .
+
+ns35:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(58.656422718182824, 57.670406201130518, 0.0), (63.656422718182824, 49.010149201130531, 0.0), (63.656422718182824, 49.010149201130531, 11.0625), (58.656422718182824, 57.670406201130518, 11.0625), (37.005785772225309, 45.170409407757354, 0.0), (42.005785772225309, 36.51015240775736, 0.0), (42.005785772225309, 36.51015240775736, 11.0625), (37.005785772225309, 45.170409407757354, 11.0625)]" .
+
+<#SpaceBoundaryElement8> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns1:hasProperty ns1:MaterialData3D .
+
+ns1:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(58.656422718182824, 57.670406201130518, 0.0), (63.656422718182824, 49.010149201130531, 0.0), (63.656422718182824, 49.010149201130531, 11.0625), (58.656422718182824, 57.670406201130518, 11.0625), (-21.718243069489578, 11.266087144737403, 0.0), (-16.718243069489578, 2.605830144737403, 0.0), (-16.718243069489578, 2.605830144737403, 11.0625), (-21.718243069489578, 11.266087144737403, 11.0625)]" .
+
+<#SpaceBoundaryElement9> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement> ;
+    ns34:hasProperty ns34:MaterialData3D .
+
+ns34:MaterialData3D ns3:hasType "3DElementCoordinates" ;
+    ns3:hasValue "[(-45.952157576043753, 49.62055422320104, 0.0), (-28.631651676043752, 59.620551223201041, 0.0), (-28.631651676043752, 59.620551223201041, 11.0625), (-45.952157576043753, 49.62055422320104, 11.0625), (-17.380732741470553, 0.13338613518742792, 0.0), (-0.060226841470552461, 10.13338313518743, 0.0), (-0.060226841470552461, 10.13338313518743, 11.0625), (-17.380732741470553, 0.13338613518742792, 11.0625)]" .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property5> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceData> ;
+    ns8:hasType "Coordinates" ;
+    ns8:hasValue "[(-18.0722, 2.497701, 0.0), (-22.48886, 10.14759, 0.0), (-6.178719, 19.56426, 0.0), (-1.762052, 11.91437, 0.0), (-22.48886, 10.14759, 0.0), (-22.48886, 10.14759, 10.0), (-6.178719, 19.56426, 10.0), (-6.178719, 19.56426, 0.0), (-18.0722, 2.497701, 0.0), (-18.0722, 2.497701, 10.0), (-22.48886, 10.14759, 10.0), (-22.48886, 10.14759, 0.0), (-18.0722, 2.497701, 0.0), (-1.762052, 11.91437, 0.0), (-1.762052, 11.91437, 10.0), (-18.0722, 2.497701, 10.0), (-1.762052, 11.91437, 0.0), (-6.178719, 19.56426, 0.0), (-6.178719, 19.56426, 10.0), (-1.762052, 11.91437, 10.0), (-18.0722, 2.497701, 10.0), (-1.762052, 11.91437, 10.0), (-6.178719, 19.56426, 10.0), (-22.48886, 10.14759, 10.0)]" .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space> ns2:hasProperty <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceData> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection> ns6:hasProperty <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceMassingData> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection1> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection> ;
+    ns6:hasSpaceMember <#Space1> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation> ns4:hasProperty <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceLocationData> ;
+    ns4:hasSpaceBoundaryMember <#SpaceBoundary7>,
+        <#SpaceBoundary8> ;
+    ns4:hasSpaceCollectionMember <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection1> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceData> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceMassingData> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceLocationData> a <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property> .
+

@@ -1,0 +1,997 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uso: <http://www.myuso.exp#> .
+@prefix geos: <http://schema.org/geo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+@prefix grddl: <https://www.w3.org/2003/g/data-view#> .
+@prefix xslt: <https://www.w3.org/TR/xslt-30/schema-for-xslt30#> .
+@prefix xpath: <https://www.w3.org/TR/1999/REC-xpath-19991116/#> .
+
+@prefix gbxml: <http://www.gbxml.org/schema#> .
+@prefix citygml: <http://www.citygml.org/index.php?id=1540#> .
+@prefix ifcxml: <http://www.buildingsmart-tech.org/ifc#> .
+
+
+
+ifcxml: rdf:type geo:SpatialObject ;
+                rdf:type grddl:RootNode ;
+                rdf:type uso:GeoInstance ;
+                uso:hasSpatialCollectionLocationMember uso:SpaceCollectionLocation ;
+                grddl:transformation xslt:import;
+                rdf:type grddl:RootNode ;
+                rdfs:comment """The order to process in this schema""" ;
+                grddl:transformationProperty [ rdf:first uso:GeoInstance ;
+                                               rdf:rest [rdf:first uso:SpaceCollectionLocation ;
+                                                         rdf:rest [rdf:first uso:SpaceCollection ;
+                                                                   rdf:rest [rdf:first uso:Space ;
+                                                                             rdf:rest [rdf:first uso:SpaceBoundary ;
+                                                                                       rdf:rest [rdf:first uso:SpaceBoundaryElement ;
+                                                                         ] ] ] ] ] ] ;
+                rdfs:comment """*-> means use root handling in parser because not straight forward
+								xslt:element->"start" means location of root node
+                                xslt:list->"coors" means place of respective coordinate data following fdata formatting
+                                xslt:list->"info" means info points we care about at this level
+                                xslt:list->"idata" means collect these data at current level
+                                xslt:list->"fdata" means at this level follow this path further
+								xslt:list->"bklevel" means find this data, match to this string, back up x levels, go forward to here and get data
+                                xslt:list->"bdata" means from current href start over at main root""" ;
+                xslt:element [ rdf:first "start"^^xsd:string ;
+                               rdf:rest [ rdf:first "/*"^^xsd:string ;
+                                          rdf:rest rdf:nil ]
+                             ] ;
+                xslt:attribute [ rdf:first rdf:nil ;
+                                 rdf:rest rdf:nil ] ;
+                xslt:complexType "unnecessary"^^xsd:string ;
+                rdfs:isDefinedBy rdf:nil ;
+                xslt:list [ rdf:first rdf:nil ;
+                            rdf:rest rdf:nil ] ;
+                geo:hasGeometry [ rdf:first rdf:nil ;
+                                   rdf:rest rdf:nil ] .
+								   
+ifcxml:IfcSite  rdf:type uso:SpaceCollectionLocation ;
+                grddl:transformation uso:SpaceCollectionLocation ;
+                uso:hasSpaceCollectionMember uso:SpaceCollection ;
+                xslt:element [ rdf:first "start"^^xsd:string ;
+                               rdf:rest [ rdf:first "*/ifc:IfcSite"^^xsd:string ;
+                                          rdf:rest rdf:nil ]
+                             ] ;
+                xslt:list (
+                           "info"^^xsd:string
+                           [ rdf:first ifcxml:RefLatitude ;
+                             rdf:rest [rdf:first ifcxml:RefLongitude ;
+                                       rdf:rest [rdf:first ifcxml:RefElevation ;
+                                                 rdf:rest rdf:nil ]
+                                      ]
+                           ]
+                          ) ;
+                xslt:attribute [ rdf:first rdf:nil ;
+                                 rdf:rest rdf:nil ] ;
+                xslt:complexType "unnecessary"^^xsd:string ;
+                rdfs:isDefinedBy rdf:nil ;
+                geo:hasGeometry [ rdf:first rdf:nil ;
+                                   rdf:rest rdf:nil ] .
+ifcxml:RefLatitude rdf:type geos:GeoCoordinates ;
+                   rdfs:isDefinedBy ( _:b0 ) .
+_:b0 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "*/ifc:IfcSite/ifc:RefLatitude/exp:integer-wrapper"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .
+ifcxml:RefLongitude rdf:type geos:GeoCoordinates ;
+                    rdfs:isDefinedBy ( _:b1 ) .
+_:b1 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "*/ifc:IfcSite/ifc:RefLongitude/exp:integer-wrapper"^^xsd:string ;
+                                   rdf:rest rdf:nil ] .
+ifcxml:RefElevation rdf:type geos:GeoCoordinates ;
+                    rdfs:isDefinedBy ( _:b2 ) .
+_:b2 xslt:element "bdata"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "*/ifc:IfcSite/ifc:RefElevation"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .
+
+ifcxml:IfcBuilding  rdf:type uso:SpaceCollection ;
+				 grddl:transformation uso:SpaceCollection ;
+				 uso:hasSpaceMember uso:Space ;
+				 xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "*/ifc:IfcBuilding"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                              ] ;
+				 xslt:list (
+						    "info"^^xsd:string
+						    [ rdf:first ifcxml:AreaValue ;
+							  rdf:rest rdf:nil ]
+						   ) ;
+				 xslt:attribute [ rdf:first rdf:nil ;
+                                  rdf:rest rdf:nil ] ;
+                 xslt:complexType "unnecessary"^^xsd:string ;
+                 rdfs:isDefinedBy rdf:nil ;
+                 geo:hasGeometry [ rdf:first rdf:nil ;
+                                    rdf:rest rdf:nil ] .									
+ifcxml:AreaValue rdfs:isDefinedBy ( _:b3 ) .
+_:b3 xslt:element "bklevel"^^xsd:string ;
+     xslt:attribute [ rdf:first rdf:nil ;
+                      rdf:rest rdf:nil ] ;
+     grddl:transformationProperty [ rdf:first "*/ifc:IfcQuantityArea"^^xsd:string ;
+                                    rdf:rest [rdf:first "/ifc:Name"^^xsd:string ;
+                                              rdf:rest [rdf:first "GrossFloorArea"^^xsd:string ;
+                                                         rdf:rest [rdf:first "/ifc:AreaValue"^^xsd:string ;
+																   rdf:rest rdf:nil ]
+													    ]
+                                             ]
+                                  ] . 
+					
+ifcxml:IfcSpace   rdf:type uso:Space ;
+			  grddl:transformation uso:Space ;
+			  uso:hasSpaceBoundaryMember uso:SpaceBoundary ;
+			  xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "*/ifc:IfcSpace"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                           ] ;
+			  xslt:list (
+                         "info"^^xsd:string
+                         [ rdf:first ifcxml:IfcSpaceChild ;
+                           rdf:rest rdf:nil ]
+                        ) ;
+              xslt:attribute [ rdf:first ifcxml:id ;
+                               rdf:rest rdf:nil ] ;
+              xslt:complexType "complex_"^^xsd:string ;
+              rdfs:isDefinedBy _:b997 ;
+              geo:hasGeometry [ rdf:first _:b4 ;
+                                rdf:rest rdf:nil ] .
+ifcxml:IfcSpaceChild rdfs:isDefinedBy ( _:b998 ) .
+_:b998  xslt:element "bdata"^^xsd:string ;
+       xslt:attribute [ rdf:first ifcxml:ref ;
+                        rdf:rest rdf:nil ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary/ifc:RelatingSpace/ifc:IfcSpace"^^xsd:string ;
+                                      rdf:rest rdf:nil ] .
+_:b997 xslt:element "bdata"^^xsd:string ;
+      xslt:attribute [ rdf:first ifcxml:ref ;
+                       rdf:rest rdf:nil ] ;
+      grddl:transformationProperty "*/ifc:IfcRelSpaceBoundary/ifc:RelatingSpace/ifc:IfcSpace"^^xsd:string .								
+									  
+									  
+_:b4 rdf:type geo:Geometry ;
+     rdfs:label "3DM"@en ;
+	 rdfs:isDefinedBy [ rdf:first _:b5 ;
+                        rdf:rest [ rdf:first _:b11 ;
+								   rdf:rest [ rdf:first _:b16 ;
+											  rdf:rest [ rdf:first _:b21 ;
+											             rdf:rest rdf:nil ]
+											]
+								 ]
+				      ] ;
+     xslt:element "fdata"^^xsd:string ;
+     grddl:transformationProperty [ rdf:first "some_function_this_level"^^xsd:string ;
+                                    rdf:rest rdf:nil ] .
+_:b5  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b6 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcSpace"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Representation/ifc:IfcProductDefinitionShape"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b6  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b7 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcProductDefinitionShape"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Representations/ifc:IfcShapeRepresentation"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b7  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b8 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcShapeRepresentation"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Items/ifc:IfcExtrudedAreaSolid"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b8  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b9 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcExtrudedAreaSolid"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Position/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b9  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b10 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Location/ifc:IfcCartesianPoint"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b10  xslt:element "fdata"^^xsd:string ;
+	  rdf:type "center_point"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:exp:pos ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcCartesianPoint"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+
+_:b11  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b12 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcSpace"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Representation/ifc:IfcProductDefinitionShape"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b12  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b13 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcProductDefinitionShape"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Representations/ifc:IfcShapeRepresentation"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b13  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b14 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcShapeRepresentation"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Items/ifc:IfcExtrudedAreaSolid"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b14  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b15 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcExtrudedAreaSolid"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:SweptArea/ifc:IfcRectangleProfileDef"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b15  xslt:element "fdata"^^xsd:string ;
+      rdf:type "x_center_offset"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:none ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcRectangleProfileDef"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:XDim"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+
+_:b16  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b17 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcSpace"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Representation/ifc:IfcProductDefinitionShape"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b17  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b18 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcProductDefinitionShape"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Representations/ifc:IfcShapeRepresentation"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b18  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b19 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcShapeRepresentation"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Items/ifc:IfcExtrudedAreaSolid"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b19  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b20 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcExtrudedAreaSolid"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:SweptArea/ifc:IfcRectangleProfileDef"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b20  xslt:element "fdata"^^xsd:string ;
+      rdf:type "y_center_offset"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:none ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcRectangleProfileDef"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:YDim"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+
+_:b21  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b22 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcSpace"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Representation/ifc:IfcProductDefinitionShape"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b22  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b23 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcProductDefinitionShape"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Representations/ifc:IfcShapeRepresentation"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b23  xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b24 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcShapeRepresentation"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Items/ifc:IfcExtrudedAreaSolid"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b24  xslt:element "fdata"^^xsd:string ;
+	  rdf:type "depth"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:none ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcExtrudedAreaSolid"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Depth"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+
+ifcxml:IfcRelSpaceBoundary  rdf:type uso:SpaceBoundary ;
+                grddl:transformation uso:SpaceBoundary ;
+                uso:hasSpaceBoundaryElementMember uso:SpaceBoundaryElement ;
+                xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                             ] ;
+                xslt:list (
+                           "info"^^xsd:string
+                           [ rdf:first ifcxml:RelatingSpace ;
+                             rdf:rest rdf:nil ]
+                          ) ;
+                xslt:attribute [ rdf:first ifcxml:id ;
+                                 rdf:rest [ rdf:first ifcxml:none ;
+                                            rdf:rest rdf:nil ]
+							   ] ;
+                xslt:complexType "LinkedG"^^xsd:string ;
+                rdfs:isDefinedBy _:b999 ;
+                geo:hasGeometry [ rdf:first _:b26 ;
+                                  rdf:rest rdf:nil] .		
+
+ifcxml:RelatingSpace rdfs:isDefinedBy ( _:b25 ) .
+_:b25  xslt:element "fdata"^^xsd:string ;
+       xslt:attribute [ rdf:first ifcxml:ref ;
+                        rdf:rest rdf:nil ] ;
+       grddl:transformationProperty [ rdf:first "/ifc:RelatingSpace/ifc:IfcSpace"^^xsd:string ;
+                                      rdf:rest rdf:nil ] .		
+_:b999  rdf:type geo:Geometry ;
+		rdfs:label "3DC"@en ;
+		rdfs:isDefinedBy [ rdf:first _:b52 ;
+                           rdf:rest [ rdf:first _:b58 ;
+                                      rdf:rest rdf:nil ] 
+						 ] ;
+		xslt:element "fdata"^^xsd:string ;
+		grddl:transformationProperty [ rdf:first "some_function_this_level"^^xsd:string ;
+									   rdf:rest rdf:nil ] .									  
+_:b26  rdf:type geo:Geometry ;
+       rdfs:label "2DM"@en ;
+	   rdfs:isDefinedBy [ rdf:first _:b27 ;
+                          rdf:rest [ rdf:first _:b33 ;
+								     rdf:rest [ rdf:first _:b39 ;
+											    rdf:rest [ rdf:first _:b45 ;
+											               rdf:rest rdf:nil ]
+											  ]
+								   ]
+				        ] ;
+       xslt:element "fdata"^^xsd:string ;
+       grddl:transformationProperty [ rdf:first "some_function_this_level"^^xsd:string ;
+                                      rdf:rest rdf:nil ] .
+_:b27 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b28 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:ConnectionGeometry/ifc:IfcConnectionSurfaceGeometry"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									  	
+_:b28 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b29 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcConnectionSurfaceGeometry"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:SurfaceOnRelatingElement/ifc:IfcCurveBoundedPlane"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b29 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b30 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcCurveBoundedPlane"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:BasisSurface/ifc:IfcPlane"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b30 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b31 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcPlane"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Position/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									   
+_:b31 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b32 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Location/ifc:IfcCartesianPoint"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									   
+_:b32 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "relative_origin"^^xsd:string ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcCartesianPoint"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									   
+_:b33 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b34 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:ConnectionGeometry/ifc:IfcConnectionSurfaceGeometry"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									  	
+_:b34 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b35 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcConnectionSurfaceGeometry"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:SurfaceOnRelatingElement/ifc:IfcCurveBoundedPlane"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b35 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b36 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcCurveBoundedPlane"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:BasisSurface/ifc:IfcPlane"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b36 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b37 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcPlane"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Position/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									   
+_:b37 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b38 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Axis/ifc:IfcDirection"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+_:b38 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "z_axis_relative"^^xsd:string ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcDirection"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:DirectionRatios/exp:double-wrapper"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .								   								   
+_:b39 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b40 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:ConnectionGeometry/ifc:IfcConnectionSurfaceGeometry"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									  	
+_:b40 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b41 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcConnectionSurfaceGeometry"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:SurfaceOnRelatingElement/ifc:IfcCurveBoundedPlane"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b41 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b42 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcCurveBoundedPlane"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:BasisSurface/ifc:IfcPlane"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b42 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b43 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcPlane"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Position/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									   
+_:b43 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b44 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:RefDirection/ifc:IfcDirection"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b44 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "x_axis_relative"^^xsd:string ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcDirection"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:DirectionRatios/exp:double-wrapper"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .			
+_:b45 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b46 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:ConnectionGeometry/ifc:IfcConnectionSurfaceGeometry"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .									  	
+_:b46 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b47 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcConnectionSurfaceGeometry"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:SurfaceOnRelatingElement/ifc:IfcCurveBoundedPlane"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b47 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b48 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcCurveBoundedPlane"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:OuterBoundary/ifc:IfcPolyline"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .	
+_:b48 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy _:b49 ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcPolyline"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Points/ifc:IfcCartesianPoint"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .		
+_:b49 xslt:element "fdata"^^xsd:string ;
+      rdfs:isDefinedBy rdf:nil ;
+	  rdf:type "plane_coordinates"^^xsd:string ;
+      xslt:attribute [ rdf:first ifcxml:id ;
+                       rdf:rest [rdf:first ifcxml:ref ;
+                                 rdf:rest rdf:nil ]
+                     ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcCartesianPoint"^^xsd:string ;
+                                     rdf:rest [ rdf:first "/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string ;
+                                                rdf:rest rdf:nil ]
+                                   ] .
+			
+ifcxml:IfcMaterialLayer  rdf:type    uso:SpaceBoundaryElement ;
+                 grddl:transformation uso:SpaceBoundaryElement ;
+                 uso:hasLastDataSet uso:lastDataSet ;
+                 xslt:element [ rdf:first "start"^^xsd:string ;
+                                rdf:rest [ rdf:first "*/ifc:IfcMaterialLayer"^^xsd:string ;
+                                           rdf:rest rdf:nil ]
+                              ] ;
+                 xslt:list (
+                            "info"^^xsd:string
+                            [ rdf:first ifcxml:LayerThickness ;
+                              rdf:rest rdf:nil ]
+                           ) ;
+                 xslt:attribute [ rdf:first ifcxml:id ;
+                                  rdf:rest rdf:nil ] ;
+                 xslt:complexType "unnecessary"^^xsd:string ;
+                 rdfs:isDefinedBy rdf:nil ;
+                 geo:hasGeometry [ rdf:first _:b51 ;
+                                    rdf:rest rdf:nil ] .	
+
+ifcxml:LayerThickness rdfs:isDefinedBy ( _:b50 ) .
+_:b50 xslt:element "bdata"^^xsd:string ;
+	  rdfs:isDefinedBy rdf:nil ;
+	  xslt:attribute [ rdf:first rdf:nil ;
+                       rdf:rest rdf:nil ] ;
+      grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayer/ifc:LayerThickness"^^xsd:string ;
+                                     rdf:rest rdf:nil ] .
+
+_:b51  rdf:type geo:Geometry ;
+		rdfs:label "3DC"@en ;
+		rdfs:isDefinedBy [ rdf:first _:b52 ;
+                           rdf:rest [ rdf:first _:b58 ;
+                                      rdf:rest [ rdf:first _:b65 ;
+                                                 rdf:rest [ rdf:first _:b69 ;
+															rdf:rest [ rdf:first _:b73 ;
+																	   rdf:rest rdf:nil ] 
+														  ]  
+											   ] 
+									] 
+						 ] ;
+		xslt:element "fdata"^^xsd:string ;
+		grddl:transformationProperty [ rdf:first "some_function_this_level"^^xsd:string ;
+									   rdf:rest rdf:nil ] .
+_:b52 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b53 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatedBuildingElement***"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b53 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b54 ;
+       xslt:attribute [ rdf:first ifcxml:ref ;
+                        rdf:rest [rdf:first ifcxml:id ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial/ifc:RelatedObjects"^^xsd:string ;
+                                      rdf:rest [ rdf:first "*/ifc:IfcRelAssociatesMaterial*2*"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .
+_:b54 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b55 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatingMaterial/ifc:IfcMaterialLayerSetUsage"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b55 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b56 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayerSetUsage"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:ForLayerSet/ifc:IfcMaterialLayerSet"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b56 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b57 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayerSet"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:MaterialLayers/ifc:IfcMaterialLayer"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b57 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy rdf:nil ;
+	   rdf:type "thickness"^^xsd:string ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayer"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:LayerThickness"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .											
+										
+_:b58  xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b59 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatedBuildingElement***"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b59 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b60 ;
+       xslt:attribute [ rdf:first ifcxml:ref ;
+                        rdf:rest [rdf:first ifcxml:id ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAggregates/ifc:RelatingObject"^^xsd:string ;
+                                      rdf:rest [ rdf:first ".*2*"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .
+_:b60 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b61 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAggregates"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatedObjects***"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .									
+_:b61 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b62 ;
+       xslt:attribute [ rdf:first ifcxml:ref ;
+                        rdf:rest [rdf:first ifcxml:id ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial/ifc:RelatedObjects"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:IfcRelAssociatesMaterial*2*"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .									
+_:b62 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b63 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatingMaterial/ifc:IfcMaterialLayerSet"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b63 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b64 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayerSet"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:MaterialLayers/ifc:IfcMaterialLayer"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b64 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy rdf:nil ;
+	   rdf:type "thickness"^^xsd:string ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayer"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:LayerThickness"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b65 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b66 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatedBuildingElement***"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b66 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b67 ;
+       xslt:attribute [ rdf:first ifcxml:ref ;
+                        rdf:rest [rdf:first ifcxml:id ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial/ifc:RelatedObjects"^^xsd:string ;
+                                      rdf:rest [ rdf:first "*/ifc:IfcRelAssociatesMaterial*2*"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .
+_:b67 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b68 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatingMaterial/ifc:IfcMaterialLayerSetUsage"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b68 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy rdf:nil ;
+	   rdf:type "direction_sense"^^xsd:string ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayerSetUsage"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:DirectionSense"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .																			
+_:b69 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b70 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatedBuildingElement***"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b70 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b71 ;
+       xslt:attribute [ rdf:first ifcxml:ref ;
+                        rdf:rest [rdf:first ifcxml:id ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial/ifc:RelatedObjects"^^xsd:string ;
+                                      rdf:rest [ rdf:first "*/ifc:IfcRelAssociatesMaterial*2*"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .
+_:b71 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b72 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatingMaterial/ifc:IfcMaterialLayerSetUsage"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b72 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy rdf:nil ;
+	   rdf:type "reference_line_offset"^^xsd:string ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayerSetUsage"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:OffsetFromReferenceLine"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .											
+_:b73 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b74 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelSpaceBoundary"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatedBuildingElement***"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b74 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b75 ;
+       xslt:attribute [ rdf:first ifcxml:ref ;
+                        rdf:rest [rdf:first ifcxml:id ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial/ifc:RelatedObjects"^^xsd:string ;
+                                      rdf:rest [ rdf:first "*/ifc:IfcRelAssociatesMaterial*2*"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .
+_:b75 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy _:b76 ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcRelAssociatesMaterial"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:RelatingMaterial/ifc:IfcMaterialLayerSetUsage"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .	
+_:b76 xslt:element "fdata"^^xsd:string ;
+       rdfs:isDefinedBy rdf:nil ;
+	   rdf:type "layer_direction"^^xsd:string ;
+       xslt:attribute [ rdf:first ifcxml:id ;
+                        rdf:rest [rdf:first ifcxml:ref ;
+                                  rdf:rest rdf:nil ]
+                      ] ;
+       grddl:transformationProperty [ rdf:first "*/ifc:IfcMaterialLayerSetUsage"^^xsd:string ;
+                                      rdf:rest [ rdf:first "/ifc:LayerSetDirection"^^xsd:string ;
+                                                 rdf:rest rdf:nil ]
+                                    ] .		
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+
+
+									
+							

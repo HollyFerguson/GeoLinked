@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#"
+     xml:base="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#belongsToSpace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#belongsToSpace">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#belongsToSpaceCollection -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#belongsToSpaceCollection">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasProperty">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceBoundaryElementMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceBoundaryElementMember">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceBoundaryMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceBoundaryMember">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceCollectionMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceCollectionMember">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceMember">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpatialCollectionLocationMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpatialCollectionLocationMember">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#ASpatialObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Type"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Value"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Value"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#ASpatialObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#ASpatialObject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#ASpatialObject"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

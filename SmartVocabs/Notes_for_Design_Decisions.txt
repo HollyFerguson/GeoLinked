@@ -1,0 +1,44 @@
+
+# For gbxml, the structural pieces can be associated to both a surface and space and level directly
+# For ifcxml, the structural pieces can only be associated to a level as has been found so far
+# Thus the options are to add on to level properties if they were already added but since that is not a guarantee,
+# We will add level, name of structural piece, coors, etc. as has_level_structure to building level
+# So, when asking for structural pieces, must check for both building level AND space level structural components
+
+# For example, this is the best IFC will do for associating items together, given all the spaces and columns and
+# windows and doors for a level, they are grouped, but not what spaces the columns each belong to, etc.
+<IfcRelContainedInSpatialStructure id="i5599">
+			<GlobalId>2JF4e6axWHqu3u0C5FZlmi</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i1677"/>
+			</OwnerHistory>
+			<RelatedElements exp:cType="set">
+				<IfcWallStandardCase xsi:nil="true" ref="i3352"/>    space ref="i3033", i1777, i2083, i2644
+				<IfcWallStandardCase xsi:nil="true" ref="i3578"/>    i2644, i2083
+				<IfcWallStandardCase xsi:nil="true" ref="i3688"/>    i2644. i1777, i2083, i3033
+				<IfcWallStandardCase xsi:nil="true" ref="i3792"/>    i1777, i3033
+				<IfcDoor xsi:nil="true" ref="i3982"/>                i1777
+				<IfcWindow xsi:nil="true" ref="i4230"/>              i1777
+				<IfcWindow xsi:nil="true" ref="i4469"/>              i1777
+				<IfcSlab xsi:nil="true" ref="i4559"/>                i1777, i2083
+				<IfcWallStandardCase xsi:nil="true" ref="i4687"/>    i1777, i2083
+				<IfcWindow xsi:nil="true" ref="i4936"/>              i2083
+				<IfcDoor xsi:nil="true" ref="i5142"/>                i1777, i2083
+				<IfcColumn xsi:nil="true" ref="i5252"/>
+				<IfcColumn xsi:nil="true" ref="i5350"/>
+				<IfcColumn xsi:nil="true" ref="i5428"/>
+				<IfcColumn xsi:nil="true" ref="i5506"/>
+			</RelatedElements>
+			<RelatingStructure>
+				<IfcBuildingStorey xsi:nil="true" ref="i1745"/>        Level 1, Elevation 0
+			</RelatingStructure>
+</IfcRelContainedInSpatialStructure>­­
+
+# On the other side, gbxml only seems to distinguish between Round or Square Columns, where W-Flange, for ex.
+# are not able to be distinguished without heavy geometric analysis, there are mis-tagged as floors, etc.
+# gbxml also tends to keep round columns as single entities (one surface definition) where square columns are broken
+# down into four different surfaces, where we need to group the data and store all of it as a node for each surface
+# part, however for these, we also set each surface to belong to a certain structural CadID for easier grouping
+# So far, ifcxml does not break down columns into separate surfaces.
+
+

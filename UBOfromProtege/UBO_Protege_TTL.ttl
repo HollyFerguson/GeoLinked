@@ -1,0 +1,218 @@
+@prefix : <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO> .
+
+<http://www.semanticweb.org/hfergus2/ontologies/2015/UBO> rdf:type owl:Ontology ;
+                                                          
+                                                          owl:versionIRI <http://www.semanticweb.org/hfergus2/ontologies/2015/UBO/1.0.0> .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#belongsToSpace
+
+:belongsToSpace rdf:type owl:ObjectProperty ;
+                
+                rdfs:range :Space ;
+                
+                rdfs:domain :SpaceBoundary .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#belongsToSpaceCollection
+
+:belongsToSpaceCollection rdf:type owl:ObjectProperty ;
+                          
+                          rdfs:domain :Space ;
+                          
+                          rdfs:range :SpaceCollection .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasProperty
+
+:hasProperty rdf:type owl:ObjectProperty ;
+             
+             rdfs:range :Property ;
+             
+             rdfs:domain :Space ,
+                         :SpaceBoundary ,
+                         :SpaceBoundaryElement ,
+                         :SpaceCollection ,
+                         :SpaceCollectionLocation .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceBoundaryElementMember
+
+:hasSpaceBoundaryElementMember rdf:type owl:ObjectProperty ;
+                               
+                               rdfs:domain :SpaceBoundary ;
+                               
+                               rdfs:range :SpaceBoundaryElement ;
+                               
+                               rdfs:domain :SpaceCollectionLocation .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceBoundaryMember
+
+:hasSpaceBoundaryMember rdf:type owl:ObjectProperty ;
+                        
+                        rdfs:domain :Space ;
+                        
+                        rdfs:range :SpaceBoundary ;
+                        
+                        rdfs:domain :SpaceCollectionLocation .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceCollectionMember
+
+:hasSpaceCollectionMember rdf:type owl:ObjectProperty ;
+                          
+                          rdfs:range :SpaceCollection ;
+                          
+                          rdfs:domain :SpaceCollectionLocation .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpaceMember
+
+:hasSpaceMember rdf:type owl:ObjectProperty ;
+                
+                rdfs:range :Space ;
+                
+                rdfs:domain :SpaceCollection .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasSpatialCollectionLocationMember
+
+:hasSpatialCollectionLocationMember rdf:type owl:ObjectProperty ;
+                                    
+                                    rdfs:domain :ASpatialObject ;
+                                    
+                                    rdfs:range :SpaceCollectionLocation .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasType
+
+:hasType rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :Property ;
+         
+         rdfs:subPropertyOf :hasProperty ;
+         
+         rdfs:range [ rdf:type owl:Restriction ;
+                      owl:onProperty :Type ;
+                      owl:someValuesFrom xsd:string
+                    ] .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#hasValue
+
+:hasValue rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Property ;
+          
+          rdfs:subPropertyOf :hasProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Type
+
+:Type rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Value
+
+:Value rdf:type owl:DatatypeProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#ASpatialObject
+
+:ASpatialObject rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Property
+
+:Property rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#Space
+
+:Space rdf:type owl:Class ;
+       
+       rdfs:subClassOf :SpaceCollection .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundary
+
+:SpaceBoundary rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Space .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceBoundaryElement
+
+:SpaceBoundaryElement rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :SpaceBoundary .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollection
+
+:SpaceCollection rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :SpaceCollectionLocation .
+
+
+
+###  http://www.semanticweb.org/hfergus2/ontologies/2015/UBO#SpaceCollectionLocation
+
+:SpaceCollectionLocation rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :ASpatialObject .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

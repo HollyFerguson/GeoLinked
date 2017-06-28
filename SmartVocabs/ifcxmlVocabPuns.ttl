@@ -1,0 +1,36 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uso: <http://www.myuso.exp#> .
+@prefix geos: <http://schema.org/geo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+@prefix grddl: <https://www.w3.org/2003/g/data-view#> .
+@prefix xslt: <https://www.w3.org/TR/xslt-30/schema-for-xslt30#> .
+@prefix xpath: <https://www.w3.org/TR/1999/REC-xpath-19991116/#> .
+
+@prefix gbxml: <http://www.gbxml.org/schema#> .
+@prefix citygml: <http://www.citygml.org/index.php?id=1540#> .
+@prefix ifcxml: <http://www.buildingsmart-tech.org/ifc/IFC4/final/html/index.htm#> .
+
+
+ifcxml:Surface1    "start"^^xsd:string "/doc:iso_10303_28/ifc:uos/ifc:IfcRelSpaceBoundary/ifc:RelatedBuildingElement/ifc:IfcDoor"^^xsd:string ;
+                   "id"^^xsd:string "ref:ref"^^xsd:string ;
+                   "name"^^xsd:string "path:3*/ifc:IfcDoor/ifc:Name"^^xsd:string ;
+                   "coors"^^xsd:string "path:/ifc:OverallHeight"^^xsd:string ;
+                   "coors"^^xsd:string "path:/ifc:OverallWidth"^^xsd:string ;
+                   "coors"^^xsd:string "path:1:/ifc:ObjectPlacement/ifc:IfcLocalPlacement"^^xsd:string ;
+                   "coors"^^xsd:string "path:2:1*/ifc:IfcLocalPlacement/ifc:RelativePlacement/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                   "coors"^^xsd:string "path:3:1*/ifc:IfcAxis2Placement3D/ifc:Location/ifc:IfcCartesianPoint/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string .
+
+ifcxml:Surface2    "start"^^xsd:string "/doc:iso_10303_28/ifc:uos/ifc:IfcRelSpaceBoundary/ifc:RelatedBuildingElement/ifc:IfcWindow"^^xsd:string ;
+                   "id"^^xsd:string "ref:ref"^^xsd:string ;
+                   "name"^^xsd:string "path:3*/ifc:IfcWindow/ifc:Name"^^xsd:string ;
+                   "coors"^^xsd:string "path:/ifc:OverallHeight"^^xsd:string ;
+                   "coors"^^xsd:string "path:/ifc:OverallWidth"^^xsd:string ;
+                   "coors"^^xsd:string "path:1:/ifc:ObjectPlacement/ifc:IfcLocalPlacement"^^xsd:string ;
+                   "coors"^^xsd:string "path:2:1*/ifc:IfcLocalPlacement/ifc:RelativePlacement/ifc:IfcAxis2Placement3D"^^xsd:string ;
+                   "coors"^^xsd:string "path:3:1*/ifc:IfcAxis2Placement3D/ifc:Location/ifc:IfcCartesianPoint/ifc:Coordinates/ifc:IfcLengthMeasure"^^xsd:string .
+
+
