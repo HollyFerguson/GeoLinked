@@ -7,6 +7,7 @@
 # Created:     06/10/2015
 # Copyright:   (c) Holly Tina Ferguson 2015
 # License:     The University of Notre Dame
+# Windows library executables: http://www.lfd.uci.edu/~gohlke/pythonlibs/
 #-------------------------------------------------------------------------------
 
 # #!/usr/bin/python
@@ -20,9 +21,12 @@ from pycallgraph import GlobbingFilter
 from pycallgraph.output import GraphvizOutput
 import cProfile, pstats, StringIO
 import re
+from ctypes import *
+import string
+from rdflib import Graph
 
 
-def main(argv, inputfile='C:/Users/hfergus2/Desktop/Orchestration/TempXMLs/bRC_FRAME_Concrete_allComponents.ifcxml', outputpath='output.csv', material_flag=1, level_flag=1, structure_flag=1, puncture_flag=1, test_query_sequence_flag=0):
+def main(argv, inputfile='C:/Users/holly/Desktop/GeoLinked/sample_files/ifcxml/Single_Room_IFCxml.ifcxml', outputpath='output.csv', material_flag=1, level_flag=1, structure_flag=1, puncture_flag=1, test_query_sequence_flag=0):
     #C:/Users/Holly2012/Desktop/GeoLinked/sample_files/
     #C:/Users/hfergus2/Desktop/GeoLinked/sample_files/
     #C:/Users/hfergus2/Desktop/GeoLinked/sample_files/gbxml/Single_Room_GBXML.xml
@@ -89,9 +93,26 @@ def main(argv, inputfile='C:/Users/hfergus2/Desktop/Orchestration/TempXMLs/bRC_F
     geo_link.puncture_flag = puncture_flag
     geo_link.test_query_sequence_flag = test_query_sequence_flag
 
+    USO_New = geo_link.run()
 
-    geo_link.run()
-    #cProfile.runctx('geo_link.run()', None, locals())
+    #===================================================================================================================
+    # Save this graph somewhere to use in the Orchestration Modules (so orchestration will use output file)
+    # Currently this will only rewrites and saves the current graph, versioning will have to be added later
+    print "working on saving this out"
+    #print USO_New.serialize(format='turtle')
+    # Saving triples to a local .ttl file, below is the start of saving it ot a local store if changed in the future
+    outputfile = 'C:/Users/holly/Desktop/GeoLinked/FinalGraph/MyGraph.ttl'  # From the top folder and in FinalGraph
+    USO_New.serialize(destination=outputfile, format='turtle')
+
+    # This method starts to set up a real data store, can be added later on if desired.
+    #mygraph = Graph('Sleepycat', identifier='MyGraph')
+    # first time create the store:
+    #mygraph.open('C:/Users/holly/Desktop/GeoLinked/FinalGraph', create=True)
+    # work with the graph:
+    #mygraph.add(USO_New.serialize(format='turtle'))
+    # when done!
+    #mygraph.close()
+    #===================================================================================================================
 
 
     #graphviz = GraphvizOutput()
@@ -100,12 +121,6 @@ def main(argv, inputfile='C:/Users/hfergus2/Desktop/Orchestration/TempXMLs/bRC_F
     #    geo_link.run()
 
 
-    #outputfile = open(outputpath) #output.csv in the main folder
-    #with open(outputpath, 'r') as f:
-        #Add whatever stuff
-        #for line in f:
-        #    outputfile.write(line)
-    #outputfile.close()
     sys.stdout.write("Main Finished")
 
 if __name__ == "__main__":

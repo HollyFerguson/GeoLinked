@@ -1,0 +1,544 @@
+@prefix ns1: <http://www.sw.org/UBO#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:GeoInstance1 a <http://www.myuso.exp#GeoInstance> ;
+    ns1:hasSpatialCollectionLocationMember ns1:SpaceCollectionLocation1 .
+
+ns1:Property1 ns1:hasType "ifc:RefLatitude" ;
+    ns1:hasValue "[[42.0, 21.0, 30.0, 344238.0]]" .
+
+ns1:Property10 ns1:hasType "2DSpaceBoundaryMeasurements" ;
+    ns1:hasValue "[('plane_coordinates', [['0.', '0.'], ['3.', '0.'], ['3.', '4.'], ['0.', '4.'], ['0.', '0.']]), ('x_axis_relative', ['1.', '0.', '0.']), ('z_axis_relative', ['0.', '-1.', '0.']), ('y_center_offset', ['-6.485464567', '10.61583823', '3.'])]" .
+
+ns1:Property100 ns1:hasType "Elevation" ;
+    ns1:hasValue "0." .
+
+ns1:Property101 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i1742" .
+
+ns1:Property102 ns1:hasType "Name" ;
+    ns1:hasValue "Fixed:Typical Window:181896" .
+
+ns1:Property103 ns1:hasType "Coordinates" ;
+    ns1:hasValue "[['-6.735464567', '10.0325049', '3.'], ['4.', '3.']]" .
+
+ns1:Property104 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i3089" .
+
+ns1:Property105 ns1:hasType "Name" ;
+    ns1:hasValue "Single-Flush:Na na Door:181785" .
+
+ns1:Property106 ns1:hasType "Coordinates" ;
+    ns1:hasValue "[['6.666666667', '3.'], ['4.4312021', '17.11583823', '0.']]" .
+
+ns1:Property107 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2615" .
+
+ns1:Property108 ns1:hasType "Name" ;
+    ns1:hasValue "Fixed:Typical Window:181853" .
+
+ns1:Property109 ns1:hasType "Coordinates" ;
+    ns1:hasValue "[['-3.485464567', '21.19917156', '3.'], ['4.', '3.']]" .
+
+ns1:Property11 ns1:hasType "2DSpaceBoundaryMeasurements" ;
+    ns1:hasValue "[('plane_coordinates', [['0.', '0.'], ['20.', '0.'], ['20.', '11.0625'], ['0.', '11.0625'], ['0.', '0.']]), ('x_axis_relative', ['1.', '0.', '0.']), ('z_axis_relative', ['0.', '-1.', '0.']), ('y_center_offset', ['-14.98546457', '10.61583823', '0.'])]" .
+
+ns1:Property110 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2858" .
+
+ns1:Property12 ns1:hasType "2DSpaceBoundaryMeasurements" ;
+    ns1:hasValue "[('plane_coordinates', [['0.', '0.'], ['11.0625', '0.'], ['11.0625', '10.'], ['0.', '10.'], ['0.', '0.']]), ('x_axis_relative', ['0.', '0.', '1.']), ('z_axis_relative', ['-1.', '0.', '0.']), ('y_center_offset', ['-14.98546457', '10.61583823', '0.'])]" .
+
+ns1:Property13 ns1:hasType "2DSpaceBoundaryMeasurements" ;
+    ns1:hasValue "[('plane_coordinates', [['0.', '0.'], ['4.', '0.'], ['4.', '3.'], ['0.', '3.'], ['0.', '0.']]), ('x_axis_relative', ['0.', '0.', '1.']), ('z_axis_relative', ['0.', '1.', '0.']), ('y_center_offset', ['-6.485464567', '20.61583823', '3.'])]" .
+
+ns1:Property14 ns1:hasType "2DSpaceBoundaryMeasurements" ;
+    ns1:hasValue "[('plane_coordinates', [['0.', '0.'], ['11.0625', '0.'], ['11.0625', '20.'], ['0.', '20.'], ['0.', '0.']]), ('x_axis_relative', ['0.', '0.', '1.']), ('z_axis_relative', ['0.', '1.', '0.']), ('y_center_offset', ['-14.98546457', '20.61583823', '0.'])]" .
+
+ns1:Property15 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.6666666667'), ('direction_sense', 'positive'), ('reference_line_offset', '0.'), ('layer_direction', 'axis3')]" .
+
+ns1:Property16 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.04166666667'), ('axis_2_placement_relPlace', ['-15.5687979', '10.0325049', '0.']), ('axis_2_placement_relTo', ['0.', '0.', '10.'])]" .
+
+ns1:Property17 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.0625'), ('axis_2_placement_relPlace', ['-15.5687979', '10.0325049', '0.']), ('axis_2_placement_relTo', ['0.', '0.', '10.'])]" .
+
+ns1:Property18 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.9583333333'), ('axis_2_placement_relPlace', ['-15.5687979', '10.0325049', '0.']), ('axis_2_placement_relTo', ['0.', '0.', '10.'])]" .
+
+ns1:Property19 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.6666666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property2 ns1:hasType "ifc:RefLongitude" ;
+    ns1:hasValue "[[-71.0, -3.0, -35.0, -194702.0]]" .
+
+ns1:Property20 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.1666666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property21 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.2916666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property22 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.04166666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property23 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.6666666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property24 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.1666666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property25 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.2916666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property26 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.04166666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property27 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.6666666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property28 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.1666666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property29 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.2916666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property3 ns1:hasType "ifc:RefElevation" ;
+    ns1:hasValue 0e+00 .
+
+ns1:Property30 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.04166666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property31 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.6666666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property32 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.1666666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property33 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.2916666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property34 ns1:hasType "3DSpaceBoundaryElementMeasurements" ;
+    ns1:hasValue "[('thickness', '0.04166666667'), ('direction_sense', 'negative'), ('reference_line_offset', '0.5833333333'), ('layer_direction', 'axis2')]" .
+
+ns1:Property35 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.04166666667" .
+
+ns1:Property36 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2179" .
+
+ns1:Property37 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.04166666667" .
+
+ns1:Property38 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2179" .
+
+ns1:Property39 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.6666666667" .
+
+ns1:Property4 ns1:hasType "GrossFloorArea" ;
+    ns1:hasValue 1.663611e+02 .
+
+ns1:Property40 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2133" .
+
+ns1:Property41 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.9583333333" .
+
+ns1:Property42 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i3364" .
+
+ns1:Property43 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.6666666667" .
+
+ns1:Property44 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2133" .
+
+ns1:Property45 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.1666666667" .
+
+ns1:Property46 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2149" .
+
+ns1:Property47 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.2916666667" .
+
+ns1:Property48 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2164" .
+
+ns1:Property49 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.6666666667" .
+
+ns1:Property5 ns1:hasType "3DSpaceCoordinates" ;
+    ns1:hasValue "[('center_point', ['-4.985464567', '15.61583823', '0.']), ('depth', '10.'), ('x_center_offset', '8.833333333'), ('y_center_offset', '18.83333333')]" .
+
+ns1:Property50 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i3212" .
+
+ns1:Property51 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.04166666667" .
+
+ns1:Property52 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i3334" .
+
+ns1:Property53 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.0625" .
+
+ns1:Property54 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i3349" .
+
+ns1:Property55 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.1666666667" .
+
+ns1:Property56 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2149" .
+
+ns1:Property57 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.2916666667" .
+
+ns1:Property58 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2164" .
+
+ns1:Property59 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.04166666667" .
+
+ns1:Property6 ns1:hasType "2DSpaceBoundaryMeasurements" ;
+    ns1:hasValue "[('plane_coordinates', [['0.', '0.'], ['10.', '0.'], ['10.', '20.'], ['0.', '20.'], ['0.', '0.']]), ('x_axis_relative', ['0.', '1.', '0.']), ('z_axis_relative', ['0.', '0.', '-1.']), ('y_center_offset', ['-14.98546457', '10.61583823', '0.'])]" .
+
+ns1:Property60 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2179" .
+
+ns1:Property61 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.6666666667" .
+
+ns1:Property62 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2133" .
+
+ns1:Property63 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.1666666667" .
+
+ns1:Property64 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2149" .
+
+ns1:Property65 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.2916666667" .
+
+ns1:Property66 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2164" .
+
+ns1:Property67 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.04166666667" .
+
+ns1:Property68 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2179" .
+
+ns1:Property69 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.6666666667" .
+
+ns1:Property7 ns1:hasType "2DSpaceBoundaryMeasurements" ;
+    ns1:hasValue "[('plane_coordinates', [['0.', '0.'], ['20.', '0.'], ['20.', '10.'], ['0.', '10.'], ['0.', '0.']]), ('x_axis_relative', ['1.', '0.', '0.']), ('z_axis_relative', ['0.', '0.', '1.']), ('y_center_offset', ['-14.98546457', '10.61583823', '11.0625'])]" .
+
+ns1:Property70 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2133" .
+
+ns1:Property71 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.1666666667" .
+
+ns1:Property72 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2149" .
+
+ns1:Property73 ns1:hasType "Thickness" ;
+    ns1:hasValue "0.2916666667" .
+
+ns1:Property74 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i2164" .
+
+ns1:Property75 ns1:hasType "Name" ;
+    ns1:hasValue "Level 1" .
+
+ns1:Property76 ns1:hasType "Elevation" ;
+    ns1:hasValue "0." .
+
+ns1:Property77 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i1742" .
+
+ns1:Property78 ns1:hasType "Name" ;
+    ns1:hasValue "Level 1" .
+
+ns1:Property79 ns1:hasType "Elevation" ;
+    ns1:hasValue "0." .
+
+ns1:Property8 ns1:hasType "2DSpaceBoundaryMeasurements" ;
+    ns1:hasValue "[('plane_coordinates', [['0.', '0.'], ['3.', '0.'], ['3.', '6.666666667'], ['0.', '6.666666667'], ['0.', '0.']]), ('x_axis_relative', ['0.', '1.', '0.']), ('z_axis_relative', ['1.', '0.', '0.']), ('y_center_offset', ['5.014535433', '14.11583823', '0.'])]" .
+
+ns1:Property80 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i1742" .
+
+ns1:Property81 ns1:hasType "Name" ;
+    ns1:hasValue "Level 2" .
+
+ns1:Property82 ns1:hasType "Elevation" ;
+    ns1:hasValue "10." .
+
+ns1:Property83 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i1748" .
+
+ns1:Property84 ns1:hasType "Name" ;
+    ns1:hasValue "Level 1" .
+
+ns1:Property85 ns1:hasType "Elevation" ;
+    ns1:hasValue "0." .
+
+ns1:Property86 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i1742" .
+
+ns1:Property87 ns1:hasType "Name" ;
+    ns1:hasValue "Level 1" .
+
+ns1:Property88 ns1:hasType "Elevation" ;
+    ns1:hasValue "0." .
+
+ns1:Property89 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i1742" .
+
+ns1:Property9 ns1:hasType "2DSpaceBoundaryMeasurements" ;
+    ns1:hasValue "[('plane_coordinates', [['0.', '0.'], ['10.', '0.'], ['10.', '11.0625'], ['0.', '11.0625'], ['0.', '0.']]), ('x_axis_relative', ['0.', '1.', '0.']), ('z_axis_relative', ['1.', '0.', '0.']), ('y_center_offset', ['5.014535433', '10.61583823', '0.'])]" .
+
+ns1:Property90 ns1:hasType "Name" ;
+    ns1:hasValue "Level 1" .
+
+ns1:Property91 ns1:hasType "Elevation" ;
+    ns1:hasValue "0." .
+
+ns1:Property92 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i1742" .
+
+ns1:Property93 ns1:hasType "Name" ;
+    ns1:hasValue "Level 1" .
+
+ns1:Property94 ns1:hasType "Elevation" ;
+    ns1:hasValue "0." .
+
+ns1:Property95 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i1742" .
+
+ns1:Property96 ns1:hasType "Name" ;
+    ns1:hasValue "Level 1" .
+
+ns1:Property97 ns1:hasType "Elevation" ;
+    ns1:hasValue "0." .
+
+ns1:Property98 ns1:hasType "Relative_ID" ;
+    ns1:hasValue "i1742" .
+
+ns1:Property99 ns1:hasType "Name" ;
+    ns1:hasValue "Level 1" .
+
+ns1:Space1 a ns1:Space ;
+    ns1:hasProperty ns1:Property5 ;
+    ns1:hasSpaceBoundaryMember ns1:SpaceBoundary1,
+        ns1:SpaceBoundary2,
+        ns1:SpaceBoundary3,
+        ns1:SpaceBoundary4,
+        ns1:SpaceBoundary5,
+        ns1:SpaceBoundary6,
+        ns1:SpaceBoundary7,
+        ns1:SpaceBoundary8,
+        ns1:SpaceBoundary9 .
+
+ns1:SpaceBoundary1 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property6,
+        ns1:Property75,
+        ns1:Property76,
+        ns1:Property77 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement1 .
+
+ns1:SpaceBoundary2 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property7,
+        ns1:Property81,
+        ns1:Property82,
+        ns1:Property83 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement2,
+        ns1:SpaceBoundaryElement3,
+        ns1:SpaceBoundaryElement4 .
+
+ns1:SpaceBoundary3 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property105,
+        ns1:Property106,
+        ns1:Property107,
+        ns1:Property78,
+        ns1:Property79,
+        ns1:Property8,
+        ns1:Property80 .
+
+ns1:SpaceBoundary4 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property87,
+        ns1:Property88,
+        ns1:Property89,
+        ns1:Property9 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement5,
+        ns1:SpaceBoundaryElement6,
+        ns1:SpaceBoundaryElement7,
+        ns1:SpaceBoundaryElement8 .
+
+ns1:SpaceBoundary5 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property10,
+        ns1:Property102,
+        ns1:Property103,
+        ns1:Property104,
+        ns1:Property84,
+        ns1:Property85,
+        ns1:Property86 .
+
+ns1:SpaceBoundary6 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property11,
+        ns1:Property93,
+        ns1:Property94,
+        ns1:Property95 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement13,
+        ns1:SpaceBoundaryElement14,
+        ns1:SpaceBoundaryElement15,
+        ns1:SpaceBoundaryElement16 .
+
+ns1:SpaceBoundary7 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property12,
+        ns1:Property90,
+        ns1:Property91,
+        ns1:Property92 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement10,
+        ns1:SpaceBoundaryElement11,
+        ns1:SpaceBoundaryElement12,
+        ns1:SpaceBoundaryElement9 .
+
+ns1:SpaceBoundary8 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property100,
+        ns1:Property101,
+        ns1:Property108,
+        ns1:Property109,
+        ns1:Property110,
+        ns1:Property13,
+        ns1:Property99 .
+
+ns1:SpaceBoundary9 a ns1:SpaceBoundary ;
+    ns1:hasProperty ns1:Property14,
+        ns1:Property96,
+        ns1:Property97,
+        ns1:Property98 ;
+    ns1:hasSpaceBoundaryElementMember ns1:SpaceBoundaryElement17,
+        ns1:SpaceBoundaryElement18,
+        ns1:SpaceBoundaryElement19,
+        ns1:SpaceBoundaryElement20 .
+
+ns1:SpaceBoundaryElement1 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property15,
+        ns1:Property49,
+        ns1:Property50 .
+
+ns1:SpaceBoundaryElement10 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property24,
+        ns1:Property71,
+        ns1:Property72 .
+
+ns1:SpaceBoundaryElement11 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property25,
+        ns1:Property73,
+        ns1:Property74 .
+
+ns1:SpaceBoundaryElement12 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property26,
+        ns1:Property67,
+        ns1:Property68 .
+
+ns1:SpaceBoundaryElement13 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property27,
+        ns1:Property69,
+        ns1:Property70 .
+
+ns1:SpaceBoundaryElement14 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property28,
+        ns1:Property63,
+        ns1:Property64 .
+
+ns1:SpaceBoundaryElement15 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property29,
+        ns1:Property65,
+        ns1:Property66 .
+
+ns1:SpaceBoundaryElement16 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property30,
+        ns1:Property59,
+        ns1:Property60 .
+
+ns1:SpaceBoundaryElement17 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property31,
+        ns1:Property61,
+        ns1:Property62 .
+
+ns1:SpaceBoundaryElement18 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property32,
+        ns1:Property55,
+        ns1:Property56 .
+
+ns1:SpaceBoundaryElement19 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property33,
+        ns1:Property57,
+        ns1:Property58 .
+
+ns1:SpaceBoundaryElement2 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property16,
+        ns1:Property51,
+        ns1:Property52 .
+
+ns1:SpaceBoundaryElement20 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property34,
+        ns1:Property35,
+        ns1:Property36 .
+
+ns1:SpaceBoundaryElement3 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property17,
+        ns1:Property53,
+        ns1:Property54 .
+
+ns1:SpaceBoundaryElement4 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property18,
+        ns1:Property41,
+        ns1:Property42 .
+
+ns1:SpaceBoundaryElement5 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property19,
+        ns1:Property43,
+        ns1:Property44 .
+
+ns1:SpaceBoundaryElement6 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property20,
+        ns1:Property45,
+        ns1:Property46 .
+
+ns1:SpaceBoundaryElement7 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property21,
+        ns1:Property47,
+        ns1:Property48 .
+
+ns1:SpaceBoundaryElement8 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property22,
+        ns1:Property37,
+        ns1:Property38 .
+
+ns1:SpaceBoundaryElement9 a ns1:SpaceBoundaryElement ;
+    ns1:hasProperty ns1:Property23,
+        ns1:Property39,
+        ns1:Property40 .
+
+ns1:SpaceCollection1 a ns1:SpaceCollection ;
+    ns1:hasProperty ns1:Property4 ;
+    ns1:hasSpaceMember ns1:Space1 .
+
+ns1:SpaceCollectionLocation1 a ns1:SpaceCollectionLocation ;
+    ns1:hasProperty ns1:Property1,
+        ns1:Property2,
+        ns1:Property3 ;
+    ns1:hasSpaceCollectionMember ns1:SpaceCollection1 .
+

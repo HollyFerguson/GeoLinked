@@ -48,9 +48,9 @@ class Geo_Link():
         Main run function
         """
 
-        self.process_schemas()
+        USO_New = self.process_schemas()
 
-        return None
+        return USO_New
 
 
     def process_schemas(self):
@@ -226,9 +226,9 @@ class Geo_Link():
         # Nothing to return since just printing tags to check handling
 
         # Then print or save the final USO_New for use back in the Orchestration Modules:
-        print USO_New
+        #print USO_New
 
-        return 0
+        return USO_New
 
 
 
